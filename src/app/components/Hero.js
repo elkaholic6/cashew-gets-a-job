@@ -93,8 +93,8 @@ export default function Hero() {
     }, { scope: container }); 
 
   return (
-    <div className="bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+    <div className="h-screen bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
+      <div className="relative isolate px-1 pt-14 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -119,7 +119,7 @@ export default function Hero() {
             src="/cloud2.svg" 
           />
         </div>
-        <div className="flex mx-auto justify-center py-32">
+        <div className="flex mx-full justify-center py-32">
           {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Buy on Amazon Now!{' '}
@@ -196,20 +196,17 @@ export default function Hero() {
             {/* <h1 className="text-4xl font-bold tracking-tight text-amber-400 sm:text-6xl">
             Cashew, the small pup with a huge heart
             </h1> */}
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-            Follow Cashew throughout her heartwarming story about never giving up and always believing in yourself. 
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+            {/* <div className="mt-10 flex items-center justify-center gap-x-6"> */}
+              {/* <a
                 href="#"
                 className="rounded-full bg-rose-400 px-3.5 py-2.5 text-xl font-baloo font-semibold text-black shadow-[0_5px_10px_0px_rgba(0,0,0,0.2)] hover:bg-rose-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Buy Now!
-              </a>
+              </a> */}
               {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Learn more <span aria-hidden="true">→</span>
               </a> */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
         <div

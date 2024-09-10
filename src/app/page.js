@@ -1,7 +1,9 @@
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
 import Book from './components/Book';
-import CashewInSpace from './components/CashewInSpace';
+import Roadmap from './components/Roadmap';
+import Reviews from './components/Reviews';
+import NFTs from './components/NFTs';
 
 
 
@@ -11,8 +13,9 @@ export default async function Home() {
             <NavBar />
             <Hero />
             <Book />
-            <CashewInSpace />
-            {/* <ProductList products={data.products}/> */}
+            <Reviews />
+            <NFTs />
+            <Roadmap />
         </div>
     )
 }

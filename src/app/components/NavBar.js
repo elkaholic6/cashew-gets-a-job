@@ -23,7 +23,7 @@ function NavBar() {
 
   return (
     <div className="bg-gray-900">
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-[100]">
       <nav aria-label="Global" className="mx-auto p-6">
         {/* <div className="flex lg:flex-1"> */}
           {/* <a href="/" className="flex -mt-6">
@@ -48,7 +48,7 @@ function NavBar() {
             </button>
           </div>
           <div className="hidden lg:flex justify-center w-auto">
-            <div className="flex justify-center z-100 w-auto rounded-full bg-white shadow-[0_15px_40px_0px_rgba(0,0,0,3)] px-4">
+            <div className="flex justify-center z-[100] w-auto rounded-full bg-white shadow-[0_15px_40px_0px_rgba(0,0,0,3)] px-4">
               <div className="flex lg:gap-x-10 mx-6 my-2">
                 {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="font-baloo text-xl xl:text-2xl font-bold leading-6 text-black">

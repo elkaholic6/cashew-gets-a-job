@@ -26,8 +26,19 @@ module.exports = {
       },
       fontFamily: {
         baloo: ['"Baloo 2"', "sans-serif"],
+        mouse: ['"Mouse Memoirs"', "sans-serif"],
+      },
+      spacing: {
+        '1/12': '8.333333%',
+      },
+      screens: {
+        '2xs': '320px',
+        'xs': '495px',
       },
     },
+  },
+  corePlugins: {
+    aspectRatio: false,
   },
   plugins: [
     require("@tailwindcss/typography"),

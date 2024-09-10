@@ -5,6 +5,7 @@ import productsQuery from '../products/queryLib/productsQuery';
 import { storefront } from '../../../utils';
 
 export default function ProductList({ products }) {
+  console.log('products', products)
 
       return (
         <div className="bg-gray-900">
