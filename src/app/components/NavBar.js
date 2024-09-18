@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
 import Link from 'next/link'
 
 const navigation = [
@@ -19,11 +23,30 @@ const navigation = [
 ]
 
 function NavBar() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    useGSAP((context, contextSafe) => {
+      gsap.registerPlugin(ScrollTrigger);
+
+        const showAnim = gsap.from('.navbar', {
+          yPercent: -100,
+          paused: true,
+          duration: 0.5
+        }).progress(1);
+
+        ScrollTrigger.create({
+          start: "top top",
+          end: "max",
+          markers: false,
+          onUpdate: (self) => {
+            self.direction === -1 ? showAnim.play() : showAnim.reverse();
+          }
+        })
+    });
 
   return (
-    <div className="bg-gray-900">
-    <header className="fixed inset-x-0 top-0 z-[100]">
+    <div className="bg-gray-900 overflow-hidden">
+    <header className={`navbar fixed inset-x-0 top-0 z-[100]`}>
       <nav aria-label="Global" className="mx-auto p-6">
         {/* <div className="flex lg:flex-1"> */}
           {/* <a href="/" className="flex -mt-6">
@@ -47,8 +70,8 @@ function NavBar() {
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
           </div>
-          <div className="hidden lg:flex justify-center w-auto">
-            <div className="flex justify-center z-[100] w-auto rounded-full bg-white shadow-[0_15px_40px_0px_rgba(0,0,0,3)] px-4">
+          <div className={`hidden lg:flex justify-center w-auto`}>
+            <div className="flex justify-center z-[150] w-auto rounded-full bg-white shadow-[0_15px_30px_0px_rgba(0,0,0,0.3)] px-4">
               <div className="flex lg:gap-x-10 mx-6 my-2">
                 {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="font-baloo text-xl xl:text-2xl font-bold leading-6 text-black">

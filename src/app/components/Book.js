@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Reviews from './Reviews';
+
+
 function Book() {
   return (
     <div className="bg-gradient-to-b from-[#cadba8] to-[#eaffea]">
@@ -44,6 +47,7 @@ function Book() {
                   />
               </div>
             </div>
+            {/* <Reviews /> */}
           </div>
         </div>
     </div>

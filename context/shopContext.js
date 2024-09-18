@@ -17,11 +17,8 @@ export default function ShopProvider({ children }) {
   // const [cartProducts, setCartProducts] = useState([])
 
   useEffect(() => {
-    console.log("Cart in the use Effect: ", cart)
     if (localStorage.checkout_id) {
-      console.log("Cart found in local storage");
       const cartObject = JSON.parse(localStorage.checkout_id);
-      console.log("Cart object: ", cartObject);
       const storedCart = localStorage.getItem("checkout_id");
 
       if (cartObject[0].length === 0) {

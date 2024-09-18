@@ -1,28 +1,54 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { StarIcon } from '@heroicons/react/24/solid';
 
 const Reviews = () => {
   const reviewCarousel = useRef([]);
+  const [reviewWidth, setReviewWidth] = useState(null);
+  const [mounted, setMounted] = useState(false);
+
+  const updateReviewWidth = () => {
+    const reviewElement = document.querySelector('.review');
+    if(reviewElement) {
+      setReviewWidth(reviewElement.offsetWidth);
+    }
+  }
+
+  useEffect(() => {
+    setMounted(true);
+    updateReviewWidth();
+    window.addEventListener('resize', updateReviewWidth);
+    console.log("resizing...", reviewWidth);
+
+    return () => {
+      window.removeEventListener('resize', updateReviewWidth);
+    }
+  }, [reviewWidth]);
 
   useGSAP(() => {
-    gsap.set(".review", {
-      x: (i) => i * 386,
-    });
+    gsap.registerPlugin(useGSAP);
 
-    gsap.to(".review", {
-      duration: 75,
-      ease: 'none',
-      x: '+=2316',
-      modifiers: {
-        x: gsap.utils.unitize(x => parseFloat(x) % 2316),
-      },
-      repeat: -1,
-    });
-  }, [reviewCarousel]);
+    if(reviewWidth && mounted) {
+      gsap.set(".review", {
+        x: (i) => i * reviewWidth,
+      });
+  
+      console.log('reviewWidth', reviewWidth);
+  
+      gsap.to(".review", {
+        duration: 75,
+        ease: 'none',
+        x: `+=${reviewWidth * 6}`,
+        modifiers: {
+          x: gsap.utils.unitize(x => parseFloat(x) % (reviewWidth * 6)),
+        },
+        repeat: -1,
+      });
+    }
+  }, [reviewWidth, mounted]);
 
   const reviews = [
             {
@@ -78,35 +104,16 @@ const Reviews = () => {
         ]
 
         return (
-            <div className="bg-[#eaffea] py-6">
-              <div className="wrapper">
-                <div className="boxes">
-                    <div className="review">
+          <div className="bg-[#eaffea] w-screen">
+            <div className="w-screen h-[386px] relative m-auto bg-[#f2f2f2] overflow-hidden">
+                <div className="relative left-[-386px] 2xl:left-[-700px]">
+                  {reviews.map((review, i) => (
+                    <div
+                      key={i}
+                      className="review absolute w-[386px] 2xl:w-[700px] h-[386px] text-2xl text-center text-black border border-black object-cover box-border"
+                    >
                       <div className="flex flex-col font-baloo py-4 h-full">
-                        <div className="flex flex-row w-96 justify-between px-4 py-4">
-                          <div className="flex gap-1">
-                            {/* Example Star Icons */}
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                          </div>
-                          <div className="text-slate-700 text-xl">
-                            <h2>{reviews[0].name}</h2>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="flex justify-center text-black text-3xl py-4">"{reviews[0].highlight}"</h3>
-                        </div>
-                        <div className="flex items-center text-black text-lg px-4 h-full w-fit">
-                          <p>{reviews[0].review}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="review">
-                      <div className="flex flex-col font-baloo py-4 h-full">
-                        <div className="flex flex-row w-96 justify-between px-4 py-4">
+                        <div className="flex flex-row w-full justify-between px-4 py-4">
                           <div className="flex gap-1">
                             <StarIcon className="w-6 h-6 text-yellow-400" />
                             <StarIcon className="w-6 h-6 text-yellow-400" />
@@ -115,144 +122,22 @@ const Reviews = () => {
                             <StarIcon className="w-6 h-6 text-yellow-400" />
                           </div>
                           <div className="text-slate-700 text-xl">
-                            <h2>{reviews[1].name}</h2>
+                            <h2>{review.name}</h2>
                           </div>
                         </div>
                         <div>
-                          <h3 className="flex justify-center text-black text-3xl py-4">"{reviews[1].highlight}"</h3>
+                          <h3 className="flex justify-center text-black text-3xl py-4">"{review.highlight}"</h3>
                         </div>
                         <div className="flex items-center text-black text-lg px-4 h-full w-fit">
-                          <p>{reviews[1].review}</p>
+                          <p>{review.review}</p>
                         </div>
                       </div>
                     </div>
-
-                    <div className="review">
-                      <div className="flex flex-col font-baloo py-4 h-full">
-                        <div className="flex flex-row w-96 justify-between px-4 py-4">
-                          <div className="flex gap-1">
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                          </div>
-                          <div className="text-slate-700 text-xl">
-                            <h2>{reviews[2].name}</h2>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="flex justify-center text-black text-3xl py-4">"{reviews[2].highlight}"</h3>
-                        </div>
-                        <div className="flex items-center text-black text-lg px-4 h-full w-fit">
-                          <p>{reviews[2].review}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="review">
-                      <div className="flex flex-col font-baloo py-4 h-full">
-                        <div className="flex flex-row w-96 justify-between px-4 py-4">
-                          <div className="flex gap-1">
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                          </div>
-                          <div className="text-slate-700 text-xl">
-                            <h2>{reviews[3].name}</h2>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="flex justify-center text-black text-3xl py-4">"{reviews[3].highlight}"</h3>
-                        </div>
-                        <div className="flex items-center text-black text-lg px-4 h-full w-fit">
-                          <p>{reviews[3].review}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="review">
-                      <div className="flex flex-col font-baloo py-4 h-full">
-                        <div className="flex flex-row w-96 justify-between px-4 py-4">
-                          <div className="flex gap-1">
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                          </div>
-                          <div className="text-slate-700 text-xl">
-                            <h2>{reviews[4].name}</h2>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="flex justify-center text-black text-3xl py-4">"{reviews[4].highlight}"</h3>
-                        </div>
-                        <div className="flex items-center text-black text-lg px-4 h-full w-fit">
-                          <p>{reviews[4].review}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="review">
-                      <div className="flex flex-col font-baloo py-4 h-full">
-                        <div className="flex flex-row w-96 justify-between px-4 py-4">
-                          <div className="flex gap-1">
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                          </div>
-                          <div className="text-slate-700 text-xl">
-                            <h2>{reviews[5].name}</h2>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="flex justify-center text-black text-3xl py-4">"{reviews[5].highlight}"</h3>
-                        </div>
-                        <div className="flex items-center text-black text-lg px-4 h-full w-fit">
-                          <p>{reviews[5].review}</p>
-                        </div>
-                      </div>
-                    </div>
-
-
+                  ))}
                 </div>
-              </div>
-          
-              {/* Styles */}
-              <style jsx>{`
-                .wrapper {
-                width: 100vw;
-                height: 386px;
-                position: relative;
-                margin: auto;
-                background: #f2f2f2;
-                overflow: hidden;
-                }
-
-                .review {
-                width: 386px;
-                height: 386px;
-                position: absolute;
-                font-size: 25px;
-                text-align: center;
-                color: black;
-                border: solid 1px black;
-                overflow: auto;
-                box-sizing: border-box;
-                }
-
-                .boxes {
-                position: relative;
-                left: -386px;
-                }
-            `}</style>
             </div>
-          );
+          </div>
+        );
 };
 
 export default Reviews;
