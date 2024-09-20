@@ -7,6 +7,7 @@ import BookPages from './components/BookPages';
 import NFTSection from './components/NFTSection';
 import Team from './components/Team';
 import Footer from './components/Footer';
+import ChildrenReadingCarousel from './components/ChildrenReadingCarousel';
 
 
 
@@ -24,6 +25,7 @@ export default async function Home() {
                 <Team />
                 {/* <Roadmap /> */}
                 <NFTSection />
+                <ChildrenReadingCarousel />
                 <Footer />
             </div>
             

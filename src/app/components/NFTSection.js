@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { Flip } from 'gsap/Flip';
 import { useGSAP } from '@gsap/react';
 
-const wrapImages = gsap.utils.wrap(['/zookeeper.png', '/firefighter.png', '/prowrestler.png', '/rockstar.png']);
+const wrapImages = gsap.utils.wrap(['/artnft.png', '/clownnft.png', '/cybrog_v2nft.png', '/fairynft.png', '/heronft.png', 'indiana_jonesnft.png', 'wiznft.png']);
 
 function NFTSection() {
   const el = useRef();
@@ -90,12 +90,17 @@ function NFTSection() {
   }, [layout.items]);  // Only re-run effect if layout.items changes
 
   return (
-    <div className="bg-gradient-to-b from-[#e7fdd2] from-20% via-[#43e2d8] via-75% to-[#1d8dd8] to-100% w-full h-full lg:h-screen" ref={el}>
-        <h1 className="relative flex w-full justify-center items-start font-mouse text-8xl lg:text-[240px] text-gray-800 m-0 leading-none z-50">
-            CASHEWS
+    <div className="bg-gradient-to-b from-[#e7fdd2] from-20% via-[#43e2d8] via-75% to-cyan-400 to-100% w-full h-full" ref={el}>
+      <div className="flex flex-col">
+        <h1 className="relative flex w-full justify-center items-start font-mouse text-6xl md:text-8xl lg:text-[220px] text-gray-800 m-0 leading-none z-50">
+            CASHEW'S
         </h1>
-            <div className="hidden lg:block relative lg:absolute flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black lg:mt-12 font-baloo text-2xl xl:text-4xl text-black text-center w-full h-fit">
-                <div className="w-full lg:w-2/5 px-8 lg:pl-10 py-2">
+        <h2 className="relative flex w-full justify-center items-start text-center font-mouse text-6xl md:text-8xl lg:text-[97px] text-blue-800 m-0 leading-none z-50">
+            DIGITAL COLLECTIBLES
+        </h2>
+      </div>
+            <div className="hidden lg:block relative lg:absolute flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black lg:mt-16 font-baloo text-2xl xl:text-4xl text-black text-center w-full h-fit">
+                <div className="w-full lg:w-3/5 px-8 lg:pl-10 xl:pl-30 xl:pr-0 pb-4 pt-2">
                     <p>
                         3,333 Cashews are here to remind us that the key to success is never giving up.<br />
                         <br />
@@ -107,9 +112,9 @@ function NFTSection() {
             </div>
             <div className="box">
                 <div className="flex justify-center">
-                    <div className="absolute w-11/12 md:w-3/4 lg:w-1/2 lg:right-10 h-fit mt-2 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
+                    <div className="absolute w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 lg:right-16 xl:right-30 h-fit mt-2 lg:mt-5 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
                         <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
-                        <img className="object-cover z-0" src='/rockstar.png' />
+                        <img className="object-cover z-0" src='/wiznft.png' />
                         {/* <div className="absolute w-full h-full mt-32 bg-black z-40 opacity-40"></div> */}
                             {layout.items.map((item) => (
                             <div
@@ -124,16 +129,16 @@ function NFTSection() {
                     </div>
                 </div>
             </div>
-            <img className="object-cover z-0 invisible lg:absolute w-11/12 md:w-3/4 lg:w-1/2" src='/rockstar.png' />
-            <div className="lg:hidden relative lg:absolute flex flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black mt-6 lg:mt-12 font-baloo text-2xl xl:text-4xl text-black text-center w-full h-fit">
-                <div className="w-full lg:w-2/5 px-8 lg:pl-10 py-2">
+            <img className="object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 h-full" src='/wiznft.png' />
+            <div className="lg:hidden relative lg:absolute flex flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black mt-6 font-baloo text-lg text-black text-center w-full h-fit">
+                <div className="w-full px-8 py-4 leading-6">
                     <p>
                         3,333 Cashews are here to remind us that the key to success is never giving up.<br />
                         <br />
                         Be a part of Cashew’s rise,<br />
-                        <span className="text-2xl xl:text-4xl">OWN</span> her story
+                        <span className="text-lg font-medium">OWN</span> her story
                     </p>
-                    <button className="outline outline-2 hover:outline-green-600 bg-white hover:bg-[#fff5c1] hover:text-green-600 px-4 py-2 mt-4 text-lg xl:text-2xl rounded-full">Connect Wallet</button>
+                    <button className="outline outline-2 hover:outline-green-600 bg-white hover:bg-[#fff5c1] hover:text-green-600 px-4 py-2 mt-4 text-lg rounded-full">Connect Wallet</button>
                 </div>
             </div>
     </div>

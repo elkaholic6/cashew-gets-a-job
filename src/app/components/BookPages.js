@@ -90,22 +90,22 @@ function BookPages() {
   }, [layout.items]);  // Only re-run effect if layout.items changes
 
   return (
-    <div className="bg-[#eaffea] w-full h-full" ref={el}>
+    <div className="bg-gradient-to-br from-[#ffff00e9] from-0% via-[#8aff88c4] to-[#c57819] to-100% w-full h-full" ref={el}>
         {/* <h1 className="absolute flex w-full justify-center items-start font-mouse text-[240px] text-gray-800 m-0 leading-none z-50">
             CASHEWS
         </h1> */}
         <div className="box">
             <div className="flex justify-center">
-              <div className="absolute w-3/4 max-w-[2048px] h-fit mt-10 bg-[#eaffea] overflow-hidden z-30 border-2 border-black rounded-xl">
+              <div className="absolute w-[95%] md:w-3/4 max-w-[2048px] h-fit my-4 sm:mt-4 xl:mt-6 2xl:mt-8 bg-cyan-300 z-30 border-none sm:border-[8px] md:border-[16px] border-cyan-300 rounded-xl overflow-hidden shadow-[0_0px_25px_-3px_rgba(0,0,0,0.4)]">
                   <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
-                  <img className="object-cover z-0" src='/rockstar.png' />
-                  <div className="absolute flex flex-col justify-center items-center px-10 pt-4 lg:px-20 backdrop-brightness-[0.55] font-baloo font-black text-2xl md:text-5xl lg:text-7xl text-[#ffffff] text-center w-full h-full leading-none z-[90]">
-                      <p>
+                  <img className="object-cover z-0 invisible" src='/rockstar.png' />
+                  <div className="absolute flex w-full h-full leading-none z-[90] border-2 border-gray-700 rounded-xl overflow-hidden">
+                      {/* <p>
                             When life gets ruff,<br />
                             pawsitivity leads the way!
-                      </p>
+                      </p> */}
                       {/* <button className="outline outline-4 px-4 py-2 mt-20 text-4xl lg:text-6xl rounded-full">Collect</button> */}
-                  </div>
+                  
                   {/* <div className="absolute w-full h-full bg-black z-40 opacity-20"></div> */}
 
                           {layout.items.map((item) => (
@@ -114,16 +114,16 @@ function BookPages() {
                               key={item.id}
                               className="box absolute"
                           >
-                              <img className="object-cover" src={item.image} alt={`NFT ${item.id}`} />
+                              <img className="object-cover rounded-xl overflow-hidden" src={item.image} alt={`NFT ${item.id}`} />
                           </div>
                           ))}
-
+                  </div>
                   </div>
 
               </div>
             </div>
         </div>
-        <img className="relative object-cover z-0 w-10/12 invisible" src='/zookeeper.png' />
+        <img className="relative object-cover z-0 w-[95%] py-4 xl:py-6 2xl:py-8 md:w-3/4 invisible" src='/zookeeper.png' />
     </div>
   );
 }

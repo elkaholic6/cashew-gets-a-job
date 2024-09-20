@@ -5,7 +5,7 @@ import Reviews from './Reviews';
 
 function Book() {
   return (
-    <div className="bg-gradient-to-b from-[#cadba8] to-[#eaffea]">
+    <div className="bg-gradient-to-b from-[#cadba8] to-[#8aff88c4]">
       <div className="h-full relative flex flex-col justify-center">
         <img
         className="w-full object-contain z-40 sm:hidden"
@@ -26,12 +26,12 @@ function Book() {
               <div className="w-4/5 md:w-1/2 max-h-full px-6">
                 <h1 className="md:hidden text-4xl 2xs:text-5xl xs:text-6xl text-[#FF3D00] uppercase font-outline-1 md:font-outline-2">Cashew Gets a Job</h1>
                 <div className="hidden xs:block">
-                  <p className="font-baloo text-xl md:text-3xl xl:text-4xl 2xl:text-5xl text-slate-800 pt-2 pb-4 px-6">Meet Cashew, the small pup with a huge heart. She’s always had a hard time fitting in, and she’s having an even harder time getting a job! Against all odds, Cashew teaches us to remain persistent in the search for our own true calling.</p>
+                  <p className="font-baloo text-lg md:text-3xl xl:text-4xl 2xl:text-5xl text-slate-800 pt-2 pb-4 px-6">Meet Cashew, the small pup with a huge heart. She’s always had a hard time fitting in, and she’s having an even harder time getting a job! Against all odds, Cashew teaches us to remain persistent in the search for our own true calling.</p>
                 </div>
                 <div className="mt-6 xs:mt-0 mb-0 xs:mb-4 sm:mb-0 sm:-10 flex items-center justify-center gap-x-6">
                   <a
                     href="#"
-                    className="rounded-full bg-rose-400 px-3.5 py-2.5 text-xl 2xl:text-4xl font-baloo font-semibold text-black hover:bg-rose-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="rounded-full bg-rose-400 px-3.5 py-2.5 text-xl md:text-3xl xl:text-4xl 2xl:text-5xl font-mouse text-black hover:bg-rose-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Available Now!
                   </a>

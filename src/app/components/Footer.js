@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="w-full py-5 sm:py-10 px-4 bg-gray-900 font-baloo"> {/* Container */}
       <h2 className="sr-only">Cashew Gets A Job</h2>
-      <div className="flex flex-col-reverse sm:flex-row md:justify-between lg:justify-around">
+      <div className="flex flex-col-reverse lg:justify-around">
 
         {/* :SITE NAME & SOCIAL NETWORKS */}
         <div className="relative mt-14 sm:mt-0 px-3 flex flex-col justify-center items-center text-gray-500">
@@ -71,9 +71,9 @@ const Footer = () => {
         </div>
 
         {/* :NAVIGATION */}
-        <div className="grid grid-cols-2 gap-5 text-gray-300">
+        {/* <div className="grid grid-cols-2 gap-5 text-gray-300"> */}
           {/* ::Navigation */}
-          <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4">
+          {/* <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4">
             <h3 className="py-1.5 md:py-4 text-center sm:text-left text-3xl text-yellow-400 font-bold tracking-wide font-mouse">Navigation</h3>
             <nav className="flex justify-around md:flex-col font-medium list-none">
               <li><a href="#link" className="hover:text-gray-100">Home</a></li>
@@ -81,14 +81,14 @@ const Footer = () => {
               <li><a href="#link" className="hover:text-gray-100">Team</a></li>
               <li><a href="#link" className="hover:text-gray-100">Contact</a></li>
             </nav>
-          </div>
+          </div> */}
           {/* ::Address */}
-          <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
+          {/* <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
             <h3 className="py-1.5 md:py-4 text-3xl text-yellow-400 font-bold tracking-wide font-mouse">Address</h3>
             <p className="md:w-48 text-center sm:text-left text-lg md:text-xl font-medium">101 Paradise Road, 97460 Fancy Island REUNION</p>
-          </div>
+          </div> */}
           {/* ::Email */}
-          <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
+          {/* <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
             <h3 className="py-1.5 md:py-4 text-3xl text-yellow-400 font-bold tracking-wide font-mouse">Fancy Company</h3>
             <p className="inline-flex justify-center sm:justify-start text-sm text-gray-400 font-medium">
               <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -97,7 +97,7 @@ const Footer = () => {
               </svg>
               <a href="#email">fancytailwind@paradise.com</a>
             </p>
-          </div>
+          </div> */}
           {/* ::Phone */}
           {/* <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
             <h3 className="py-1.5 md:py-4 text-3xl text-yellow-400 font-bold tracking-wide font-mouse">Phone contact</h3>
@@ -108,7 +108,7 @@ const Footer = () => {
               <span>209-217-2459</span>
             </p>
           </div> */}
-        </div>
+        {/* </div> */}
 
       </div>
     </footer>

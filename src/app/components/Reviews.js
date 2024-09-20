@@ -39,7 +39,7 @@ const Reviews = () => {
       console.log('reviewWidth', reviewWidth);
   
       gsap.to(".review", {
-        duration: 75,
+        duration: 125,
         ease: 'none',
         x: `+=${reviewWidth * 6}`,
         modifiers: {
@@ -115,21 +115,21 @@ const Reviews = () => {
                       <div className="flex flex-col font-baloo py-4 h-full">
                         <div className="flex flex-row w-full justify-between px-4 py-4">
                           <div className="flex gap-1">
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
-                            <StarIcon className="w-6 h-6 text-yellow-400" />
+                            <StarIcon className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-400" />
+                            <StarIcon className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-400" />
+                            <StarIcon className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-400" />
+                            <StarIcon className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-400" />
+                            <StarIcon className="w-5 h-5 lg:w-6 lg:h-6 text-yellow-400" />
                           </div>
-                          <div className="text-slate-700 text-xl">
+                          <div className="text-slate-700 text-lg 2xl:text-2xl">
                             <h2>{review.name}</h2>
                           </div>
                         </div>
                         <div>
-                          <h3 className="flex justify-center text-black text-3xl py-4">"{review.highlight}"</h3>
+                          <h3 className="flex justify-center text-black text-2xl 2xl:text-5xl py-4">"{review.highlight}"</h3>
                         </div>
-                        <div className="flex items-center text-black text-lg px-4 h-full w-fit">
-                          <p>{review.review}</p>
+                        <div className="flex items-center text-black text-lg 2xl:text-3xl px-4 h-full w-fit">
+                          <p>"{review.review}"</p>
                         </div>
                       </div>
                     </div>
