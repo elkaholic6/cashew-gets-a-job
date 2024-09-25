@@ -19,7 +19,6 @@ const ChildrenReadingCarousel = () => {
     setMounted(true);
     updatePhotoWidth();
     window.addEventListener('resize', updatePhotoWidth);
-    console.log("resizing...", photoWidth);
 
     return () => {
       window.removeEventListener('resize', updatePhotoWidth);
@@ -34,7 +33,6 @@ const ChildrenReadingCarousel = () => {
         x: (i) => i * photoWidth,
       });
   
-      console.log('photoWidth', photoWidth);
   
       gsap.to(".photo", {
         duration: 60,

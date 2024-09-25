@@ -90,7 +90,7 @@ function NFTSection() {
   }, [layout.items]);  // Only re-run effect if layout.items changes
 
   return (
-    <div className="bg-gradient-to-b from-[#e7fdd2] from-20% via-[#43e2d8] via-75% to-cyan-400 to-100% w-full h-full" ref={el}>
+    <div id="digital-collectibles" className="bg-gradient-to-b from-[#e7fdd2] from-20% via-[#43e2d8] via-75% to-cyan-400 to-100% w-full h-full" ref={el}>
       <div className="flex flex-col">
         <h1 className="relative flex w-full justify-center items-start font-mouse text-6xl md:text-8xl lg:text-[220px] text-gray-800 m-0 leading-none z-50">
             CASHEW'S

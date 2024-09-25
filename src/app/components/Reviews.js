@@ -21,14 +21,13 @@ const Reviews = () => {
     setMounted(true);
     updateReviewWidth();
     window.addEventListener('resize', updateReviewWidth);
-    console.log("resizing...", reviewWidth);
 
     return () => {
       window.removeEventListener('resize', updateReviewWidth);
     }
   }, [reviewWidth]);
 
-  useGSAP(() => {
+  useGSAP((context) => {
     gsap.registerPlugin(useGSAP);
 
     if(reviewWidth && mounted) {
@@ -36,7 +35,6 @@ const Reviews = () => {
         x: (i) => i * reviewWidth,
       });
   
-      console.log('reviewWidth', reviewWidth);
   
       gsap.to(".review", {
         duration: 125,

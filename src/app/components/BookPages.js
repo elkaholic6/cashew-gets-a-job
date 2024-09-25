@@ -34,8 +34,7 @@ function BookPages() {
     [q]
   );
 
-  useGSAP(
-    () => {
+  useGSAP((context) => {
       gsap.registerPlugin(Flip);
 
       if (!layout.state) return;
@@ -63,7 +62,6 @@ function BookPages() {
           }
         }
       });
-
       timeline.add(() => removeItems(exiting));
     },
     {

@@ -93,7 +93,7 @@ export default function Hero() {
     }, { scope: container }); 
 
   return (
-    <div className="h-screen bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
+    <div id="home" className="h-screen bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
       <div className="relative isolate px-1 pt-14 lg:px-8">
         <div
           aria-hidden="true"

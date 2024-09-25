@@ -88,7 +88,7 @@ const Team = () => {
         }
     ]
   return (
-    <div className="flex w-full justify-center pb-10 pt-20 border-y-[16px] border-cyan-300 bg-gradient-to-b from-[#dc7373] from-0% via-[#ff8080] via-10% to-[#dc7373] to-100%">
+    <div id="team" className="flex w-full justify-center pb-10 pt-20 border-y-[16px] border-cyan-300 bg-gradient-to-b from-[#dc7373] from-0% via-[#ff8080] via-10% to-[#dc7373] to-100%">
       <div className="container flex flex-col items-center w-full">
         <div className="w-full flex flex-wrap">
           <div className="w-full px-4">
