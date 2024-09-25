@@ -11,15 +11,15 @@ function NFTSection() {
   const el = useRef();
   const boxesRef = useRef();
   const q = gsap.utils.selector(el);
-  const countRef = useRef(0); // Use a ref to persist the count across renders
+  const countRef = useRef(0);
 
   const createItem = () => {
-    const newId = ++countRef.current;  // Increment on client-side
+    const newId = ++countRef.current;
     return { id: newId, image: wrapImages(newId), status: 'entered' };
   };
 
   const [layout, setLayout] = useState(() => ({
-    items: [createItem(), createItem(), createItem(), createItem()]  // Initialize with 4 items
+    items: [createItem(), createItem(), createItem(), createItem()]
   }));
 
   const removeItems = useCallback(
@@ -42,7 +42,6 @@ function NFTSection() {
       const exiting = layout.items.filter((item) => item.status === 'exiting');
       const timeline = Flip.from(layout.state, {
         absolute: true,
-        // ease: 'power4.out',
         targets: q('.box'),
         scale: true,
         onEnter: (elements) => {
@@ -75,19 +74,19 @@ function NFTSection() {
     const newItem = createItem();
     setLayout((prev) => ({
       state: Flip.getState(q('.box')),
-      items: [...prev.items.slice(1), newItem]  // Remove the first item and add the new one
+      items: [...prev.items.slice(1), newItem]
     }));
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (layout.items.length > 0) {
-        addItem();  // Trigger addItem which internally handles state update
+        addItem();
       }
     }, 5000);
 
-    return () => clearInterval(interval);  // Cleanup the interval on component unmount
-  }, [layout.items]);  // Only re-run effect if layout.items changes
+    return () => clearInterval(interval);
+  }, [layout.items]); 
 
   return (
     <div id="digital-collectibles" className="bg-gradient-to-b from-[#e7fdd2] from-20% via-[#43e2d8] via-75% to-cyan-400 to-100% w-full h-full" ref={el}>

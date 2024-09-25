@@ -46,18 +46,6 @@ function Book() {
 
   return (
     <div id="books" className="relative bg-gradient-to-b from-[#cadba8] from-[0%] via-[#ffa676] via-[70%] to-[#cadba8] to-[100%]">
-      {/* <div className="absolute top-32 left-44 right-0 flex items-center justify-start">
-          <img 
-            className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
-            src="/cloud1.svg" 
-          />
-        </div>
-      <div className="absolute top-72 left-25 right-1 flex items-center justify-end">
-          <img 
-            className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
-            src="/cloud2.svg" 
-          />
-        </div> */}
       <div className="horizontal flex flex-row w-[100%] object-cover bg-transparent overflow-x-hidden">
         {/* Book 1 */}
         <div className="book book1 h-full w-[100vw] shrink-0 relative flex flex-col justify-center z-10">
@@ -91,9 +79,6 @@ function Book() {
                     >
                       Available Now!
                     </a>
-                  {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                    Learn more <span aria-hidden="true">→</span>
-                  </a> */}
                 </div>
                 </div>
                 <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[30%] xl:w-1/3">
@@ -113,7 +98,6 @@ function Book() {
                   </div>
                 </div>
               </div>
-              {/* <Reviews /> */}
             </div>
           </div>
         </div>
@@ -168,7 +152,6 @@ function Book() {
                   </div>
                 </div>
               </div>
-              {/* <Reviews /> */}
             </div>
           </div>
         </div>
