@@ -8,42 +8,55 @@ const ChildrenReadingCarousel = () => {
   const [photoWidth, setPhotoWidth] = useState(null);
   const [mounted, setMounted] = useState(false);
 
-  const updatePhotoWidth = () => {
-    const photoElement = document.querySelector('.photo');
-    if(photoElement) {
-      setPhotoWidth(photoElement.offsetWidth);
-    }
-  }
-
   useEffect(() => {
     setMounted(true);
-    updatePhotoWidth();
-    window.addEventListener('resize', updatePhotoWidth);
+  }, []);
+
+
+
+  useEffect(() => {
+    const updatePhotoWidth = () => {
+        const photoElement = document.querySelector('.photo');
+        if(photoElement) {
+          setPhotoWidth(photoElement.offsetWidth);
+        }
+      };
+
+      updatePhotoWidth();
+    
+      window.addEventListener('resize', updatePhotoWidth);
 
     return () => {
       window.removeEventListener('resize', updatePhotoWidth);
     }
-  }, [photoWidth]);
+  }, []);
 
+  let tween;
   useGSAP(() => {
     gsap.registerPlugin(useGSAP);
 
-    if(photoWidth && mounted) {
-      gsap.set(".photo", {
-        x: (i) => i * photoWidth,
-      });
-  
-  
-      gsap.to(".photo", {
-        duration: 60,
-        ease: 'none',
-        x: `+=${photoWidth * 12}`,
-        modifiers: {
-          x: gsap.utils.unitize(x => parseFloat(-x) % (photoWidth * 12)),
-        },
-        repeat: -1,
-      });
+    function loop() {
+      let progress = tween ? tween.progress() : 0;
+      tween && tween.progress(0).kill();
+      if(photoWidth && mounted) {
+        gsap.set(".photo", {
+          x: (i) => i * photoWidth,
+        });
+    
+    
+       tween = gsap.to(".photo", {
+          duration: 60,
+          ease: 'none',
+          x: `+=${photoWidth * 12}`,
+          modifiers: {
+            x: gsap.utils.unitize(x => parseFloat(-x) % (photoWidth * 12)),
+          },
+          repeat: -1,
+        });
+        tween.progress(progress);
+      }
     }
+    loop();
   }, [photoWidth, mounted]);
 
   const images = ['/KidReadingCashew1.jpg', '/KidReadingCashew2.jpg', '/KidReadingCashew4.jpg', '/KidReadingCashew5.jpg', '/KidReadingCashew6.jpg', '/KidReadingCashew7.jpg', '/KidReadingCashew8.jpg', '/KidReadingCashew9.jpg', '/KidReadingCashew10.jpg', '/KidReadingCashew11.jpg', '/KidReadingCashew12.jpg', '/KidReadingCashew13.jpg', '/KidReadingCashew14.jpg'];

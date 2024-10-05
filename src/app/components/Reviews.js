@@ -6,46 +6,72 @@ import { useGSAP } from '@gsap/react';
 import { StarIcon } from '@heroicons/react/24/solid';
 
 const Reviews = () => {
-  const reviewCarousel = useRef([]);
+  const reviewCarousel = useRef();
   const [reviewWidth, setReviewWidth] = useState(null);
   const [mounted, setMounted] = useState(false);
 
-  const updateReviewWidth = () => {
-    const reviewElement = document.querySelector('.review');
-    if(reviewElement) {
-      setReviewWidth(reviewElement.offsetWidth);
-    }
-  }
 
   useEffect(() => {
     setMounted(true);
-    updateReviewWidth();
-    window.addEventListener('resize', updateReviewWidth);
+  }, []);
 
+
+  useEffect(() => {
+    const updateReviewWidth = () => {
+      const reviewElement = document.querySelector('.review');
+      if (reviewElement) {
+        setReviewWidth(reviewElement.offsetWidth);
+      }
+    };
+  
+    updateReviewWidth();
+  
+    window.addEventListener('resize', updateReviewWidth);
+  
     return () => {
       window.removeEventListener('resize', updateReviewWidth);
-    }
-  }, [reviewWidth]);
+    };
+  }, []);
 
+  let tween;
   useGSAP((context) => {
     gsap.registerPlugin(useGSAP);
 
-    if(reviewWidth && mounted) {
-      gsap.set(".review", {
-        x: (i) => i * reviewWidth,
-      });
-  
-  
-      gsap.to(".review", {
-        duration: 125,
-        ease: 'none',
-        x: `+=${reviewWidth * 6}`,
-        modifiers: {
-          x: gsap.utils.unitize(x => parseFloat(x) % (reviewWidth * 6)),
-        },
-        repeat: -1,
-      });
+    function loop() {
+      let progress = tween ? tween.progress() : 0;
+      tween && tween.progress(0).kill();
+      if(reviewWidth && mounted) {
+        gsap.set(".review", {
+          x: (i) => i * reviewWidth,
+        });
+    
+    
+        tween = gsap.to(".review", {
+          duration: 125,
+          ease: 'none',
+          x: `+=${reviewWidth * 6}`,
+          modifiers: {
+            x: gsap.utils.unitize(x => parseFloat(x) % (reviewWidth * 6)),
+          },
+          repeat: -1,
+        });
+        tween.progress(progress);
+      }
     }
+
+    // function callAfterResize(func, delay) {
+    //   let dc = gsap.delayedCall(delay || 0.2, func).pause(),
+    //     handler = () => dc.restart(true);
+    //   window.addEventListener("resize", handler);
+    //   return handler; // in case you want to window.removeEventListener() later
+    // }
+
+    // if(reviewWidth && mounted) {
+    //   callAfterResize(loop(), 0.2);
+    // } else {
+      loop();
+    // }
+
   }, [reviewWidth, mounted]);
 
   const reviews = [
@@ -104,7 +130,7 @@ const Reviews = () => {
         return (
           <div className="bg-[#eaffea] w-screen">
             <div className="w-screen h-[386px] relative m-auto bg-[#f2f2f2] overflow-hidden">
-                <div className="relative left-[-386px] 2xl:left-[-700px]">
+                <div ref={reviewCarousel} className="relative left-[-386px] 2xl:left-[-700px]">
                   {reviews.map((review, i) => (
                     <div
                       key={i}

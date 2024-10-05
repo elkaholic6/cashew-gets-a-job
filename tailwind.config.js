@@ -32,6 +32,9 @@ module.exports = {
         baloo: ['"Baloo 2"', "sans-serif"],
         mouse: ['"Mouse Memoirs"', "sans-serif"],
         lilita: ['"Lilita One"', "sans-serif"],
+        montserrat: ['"Montserrat"', "sans-serif"],
+        sans: ['"Helvetica Neue"', 'Arial', "sans-serif"],
+        serif: ['"Georgia"', '"Times New Roman"', 'Times', 'serif']
       },
       spacing: {
         '1/12': '8.333333%',

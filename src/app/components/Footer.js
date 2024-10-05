@@ -1,6 +1,8 @@
 
 import React from 'react';
-import { FaXTwitter, FaFacebookF, FaDiscord, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
+import { FaXTwitter, FaLinkedin, FaDiscord, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
+import { RiFacebookBoxFill } from "react-icons/ri";
+
 
 const Footer = () => {
   return (
@@ -10,53 +12,63 @@ const Footer = () => {
 
         {/* :SITE NAME & SOCIAL NETWORKS */}
         <div className="relative mt-14 sm:mt-0 px-3 flex flex-col justify-center items-center text-gray-500">
-          {/* ::Site name */}
-          <h1 className="font-title text-6xl text-center text-yellow-400 font-semibold mt-auto font-mouse">Cashew Gets A Job</h1>
-          {/* ::Social & copyright */}
+          <h1 className="font-title text-6xl text-center text-yellow-400 font-medium mt-auto font-mouse">Cashew Gets A Job</h1>
+          <div className="text-2xl text-blue-400 font-bold font-mouse">
+            <a
+                href="https://www.cashewgetsajob.com/pages/contact"
+                target='_blank'
+                rel='noopener noreferrer'
+            >
+                Contact
+            </a>
+          </div>
           <div className="mt-auto flex flex-col items-center">
             {/* :::Social */}
-            <span className="inline-flex mt-6 w-full justify-center md:justify-start md:w-auto">
+            <span className="inline-flex py-2 gap-6 w-full justify-center md:justify-start md:w-auto">
             <a 
-                className="text-gray-200 text-3xl inline cursor-pointer hover:text-indigo-600 w-fit px-2" 
+                className="text-gray-200 text-xl inline cursor-pointer hover:text-indigo-600 w-fit" 
                 href='https://discord.gg/vpRkK4ectJ'
                 target='_blank' 
                 rel='noopener noreferrer'>
                 <FaDiscord />
             </a>
-              {/* Facebook */}
+            <a 
+                className="text-gray-200 text-xl inline cursor-pointer hover:text-blue-700 w-fit" 
+                href='https://www.linkedin.com/company/cashewgetsajob/'
+                target='_blank' 
+                rel='noopener noreferrer'>
+                <FaLinkedin />
+            </a>
               <a 
-                className="text-gray-200 text-3xl inline cursor-pointer hover:text-gray-500 w-fit px-2" 
+                className="text-gray-200 text-xl inline cursor-pointer hover:text-gray-500 w-fit" 
                 href='https://x.com/CashewGetsaJob'
                 target='_blank' 
                 rel='noopener noreferrer'>
                 <FaXTwitter />
             </a>
               <a 
-                className="text-gray-200 text-3xl inline cursor-pointer hover:text-blue-600 w-fit px-2" 
+                className="text-gray-200 text-xl inline cursor-pointer hover:text-blue-600 w-fit" 
                 href='https://www.facebook.com/CashewGetsAJob'
                 target='_blank' 
                 rel='noopener noreferrer'>
-                <FaFacebookF />
+                <RiFacebookBoxFill />
             </a>
-              {/* Twitter */}
-              {/* Instagram */}
               <a 
-                className="text-gray-200 text-3xl inline cursor-pointer hover:text-yellow-500 w-fit px-2" 
+                className="text-gray-200 text-xl inline cursor-pointer hover:text-yellow-500 w-fit" 
                 href='https://www.instagram.com/cashewgetsajob/'
                 target='_blank' 
                 rel='noopener noreferrer'>
                 <FaInstagram />
             </a>
-              {/* Linkedin */}
               <a 
-                className="text-gray-200 text-3xl inline cursor-pointer hover:text-fuchsia-500 w-fit px-2" 
+                className="text-gray-200 text-lg inline cursor-pointer hover:text-fuchsia-500 w-fit" 
                 href='https://www.tiktok.com/@cashewgetsajob'
                 target='_blank' 
                 rel='noopener noreferrer'>
                 <FaTiktok />
             </a>
             <a 
-                className="text-gray-200 text-3xl inline cursor-pointer hover:text-red-500 w-fit px-2" 
+                className="text-gray-200 text-xl inline cursor-pointer hover:text-red-500 w-fit" 
                 href='https://www.youtube.com/channel/UCOJOtEMmgnQ9bpR6FzNGYYA'
                 target='_blank' 
                 rel='noopener noreferrer'>
@@ -64,7 +76,7 @@ const Footer = () => {
             </a>
             </span>
             {/* :::Copyright */}
-            <span className="py-4 text-xs">&copy;2024, SFR, LLC All Rights Reserved.</span>
+            <span className="pb-4 text-xs">&copy;2024, SFR, LLC All Rights Reserved.</span>
           </div>
           {/* ::Mobile separator line */}
           <span className="sm:hidden absolute -top-4 left-1/2 w-1/4 h-px bg-gray-400 transform -translate-x-1/2" aria-hidden="true"/>

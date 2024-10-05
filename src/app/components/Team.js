@@ -70,19 +70,19 @@ const Team = () => {
     const team = [
         {
             name: "Dunks",
-            role: `Founder, Content Creator, PR/Marketing`,
+            role: `Dreamer`,
             image: "/dunkspfp.webp",
             twitter: "https://x.com/DunksnJordns"
         },
         {
             name: "Buttered",
-            role: "Community Manager",
+            role: "Vibe Curator",
             image: "/butteredpfp.png",
             twitter: "https://x.com/ButteredHubter"
         },
         {
             name: "WoolCentaur",
-            role: "Developer",
+            role: "Innovator",
             image: "/woolpfp.png",
             twitter: "https://x.com/WoolCentaur"
         }
