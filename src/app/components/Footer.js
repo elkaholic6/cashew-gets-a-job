@@ -13,14 +13,30 @@ const Footer = () => {
         {/* :SITE NAME & SOCIAL NETWORKS */}
         <div className="relative mt-14 sm:mt-0 px-3 flex flex-col justify-center items-center text-gray-500">
           <h1 className="font-title text-6xl text-center text-yellow-400 font-medium mt-auto font-mouse">Cashew Gets A Job</h1>
-          <div className="text-2xl text-blue-400 font-bold font-mouse">
-            <a
-                href="https://www.cashewgetsajob.com/pages/contact"
-                target='_blank'
-                rel='noopener noreferrer'
-            >
-                Contact
-            </a>
+          <div className="flex flex-row gap-12 py-2">
+              <div className="text-lg text-blue-100 font-baloo">
+                <a
+                    href="https://www.cashewgetsajob.com/pages/contact"
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    Contact
+                </a>
+              </div>
+              <div className="text-lg text-blue-100 font-baloo">
+                <a
+                    href="/FAQ"
+                >
+                    Policies/FAQ
+                </a>
+              </div>
+              <div className="text-lg text-blue-100 font-baloo">
+                <a
+                    href="/legal"
+                >
+                    Legal
+                </a>
+              </div>              
           </div>
           <div className="mt-auto flex flex-col items-center">
             {/* :::Social */}
