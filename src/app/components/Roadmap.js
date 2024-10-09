@@ -7,6 +7,7 @@ function Roadmap() {
             <img
                 className="object-contain rounded-xl"
                 src="/Roadmap.webp" 
+                alt="roadmap"
             />
         </div>
     </div>

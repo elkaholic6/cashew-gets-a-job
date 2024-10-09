@@ -52,14 +52,17 @@ function Book() {
           <img
           className="w-full object-contain z-40 sm:hidden"
           src="/smBook.svg" 
+          alt="smBook"
           />
           <img
           className="hidden sm:block lg:hidden w-full object-contain z-40"
           src="/mdBook.svg" 
+          alt="mdBook"
           />
           <img
           className="hidden lg:block w-full object-contain z-40"
           src="/Book.svg" 
+          alt="Book"
           />
           <div className="absolute w-full h-full pb-4 pt-12 bottom-0 text-center z-50 font-mouse">
             <div className="relative h-full flex flex-col justify-center">
@@ -86,6 +89,7 @@ function Book() {
                       <img
                         src="/cashewgetsajobcircle.webp"
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                        alt="cashewgetsajobcircle"
                       />
                   </div>
                   <div className="flex items-center justify-center">
@@ -106,14 +110,17 @@ function Book() {
           <img
           className="w-full object-contain z-40 sm:hidden"
           src="/smRedBook.svg" 
+          alt="smRedBook"
           />
           <img
           className="hidden sm:block lg:hidden w-full object-contain z-40"
           src="/mdRedBook.svg" 
+          alt="mdRedBook"
           />
           <img
           className="hidden lg:block w-full object-contain z-40"
           src="/bookRed.svg" 
+          alt="bookRed"
           />
           <div className="absolute w-full h-full pb-4 pt-12  bottom-0 text-center z-50 font-mouse">
             <div className="relative h-full flex flex-col justify-center">
@@ -140,6 +147,7 @@ function Book() {
                       <img
                         src="/Cashewkeepsgoingpic.webp"
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                        alt="Cashewkeepsgoingpic"
                       />
                   </div>
                   <div className="flex items-center justify-center">

@@ -28,6 +28,7 @@ function page() {
                         <img 
                             className="flex justify-center w-4/5 mt-20 object-contain rounded-xl" 
                             src="/gamebrandslogo.webp"
+                            alt="Game brands logo"
                         />
                     </div>
                     {/* Clouds and other background stuff */}
@@ -48,12 +49,14 @@ function page() {
                             <img 
                                 className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
                                 src="/cloud1.svg" 
+                                alt="Clouds"
                             />
                         </div>
                         <div className="absolute -top-36 sm:-top-96 lg:-top-36 sm:-bottom-28 right-5 flex items-center justify-end z-30">
                             <img 
                                 className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
                                 src="/cloud2.svg" 
+                                alt="Clouds"
                             />
                         </div>
                         <div
@@ -82,7 +85,7 @@ function page() {
                                         <div className="pb-0">
                                             <h1 className="flex justify-center text-gray-800 font-mouse text-3xl py-2 sm:text-4xl md:text-5xl lg:text-6xl border-x-2 border-t-2 border-black bg-[#c5f9ff] rounded-t-xl">{game.title}</h1>
                                         </div>
-                                        <img className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover border-2 border-black rounded-b-xl" src={game.art} />
+                                        <img className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover border-2 border-black rounded-b-xl" src={game.art} alt="Game art" />
                                         <div className="flex justify-center mt-2">
                                             <a 
                                             target="_blank"
@@ -106,6 +109,7 @@ function page() {
                     <img 
                         className='object-cover h-full w-full' 
                         src="/nifty_island.png"
+                        alt="Nifty Island"
                     />
                     <a
                         type="button"

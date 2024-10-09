@@ -5,7 +5,7 @@ function IndividualCartItem({ image, title, price, quantity }) {
     <div>
         <li className="flex py-6">
             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                <img src={image} className="h-full w-full object-cover object-center" />
+                <img src={image} className="h-full w-full object-cover object-center" alt={title} />
             </div>
 
             <div className="ml-4 flex flex-1 flex-col">

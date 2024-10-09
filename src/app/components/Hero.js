@@ -104,12 +104,14 @@ export default function Hero() {
           <img 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud1.svg" 
+            alt="cloud1"
           />
         </div>
         <div className="absolute bottom-60 left-25 right-1 flex items-center justify-end">
           <img 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud2.svg" 
+            alt="cloud2"
           />
         </div>
         <div className="flex mx-full justify-center py-32">

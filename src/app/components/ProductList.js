@@ -21,6 +21,7 @@ export default function ProductList({ products }) {
                         <img
                         src={image.transformedSrc}
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                        alt={product.title}
                         />
                     </div>
                     <div className="mt-4 flex justify-between">

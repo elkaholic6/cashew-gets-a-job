@@ -24,6 +24,7 @@ console.log("product: ", product)
             src={product.image.transformedSrc} 
             layout="fill" 
             className="rounded-lg shadow-lg" 
+            alt={product.title}
         />
     //   </SwiperSlide>
     )

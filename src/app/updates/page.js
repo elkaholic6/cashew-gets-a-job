@@ -61,12 +61,14 @@ async function page() {
                         <img 
                             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
                             src="/cloud1.svg" 
+                            alt="cloud"
                         />
                     </div>
                     <div className="absolute -top-36 sm:-top-96 lg:-top-36 sm:-bottom-28 right-5 flex items-center justify-end">
                         <img 
                             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
                             src="/cloud2.svg" 
+                            alt="cloud"
                         />
                     </div>
                     <div
@@ -111,6 +113,7 @@ async function page() {
                                                                     <img
                                                                         className="border rounded max-h-[75px] max-w-[75px] sm:max-h-[100px] sm:max-w-[100px] object-cover"
                                                                         src={blog.node.image.url}
+                                                                        alt={blog.node.title}
                                                                     />
                                                                 </div>
                                                             </div>

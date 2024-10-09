@@ -71,12 +71,14 @@ export default async function SingleBlogPage({ params }) {
                         <img 
                             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
                             src="/cloud1.svg" 
+                            alt="cloud"
                         />
                     </div>
                     <div className="absolute -top-36 sm:-top-96 lg:-top-36 sm:-bottom-28 right-5 flex items-center justify-end">
                         <img 
                             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
-                            src="/cloud2.svg" 
+                            src="/cloud2.svg"
+                            alt="cloud" 
                         />
                     </div>
                     <div

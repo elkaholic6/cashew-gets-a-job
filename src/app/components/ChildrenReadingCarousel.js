@@ -71,7 +71,7 @@ const ChildrenReadingCarousel = () => {
                         key={i}
                         className="photo absolute w-[165px] xl:w-[250px] 2xl:w-[300px] h-[185px] xl:h-[275px] 2xl:h-[350px] text-2xl text-center text-black border border-gray-600 object-cover box-border"
                         >
-                            <img src={image} className="w-full h-full object-cover object-center" />
+                            <img src={image} className="w-full h-full object-cover object-center" alt="photo"/>
                         </div>
                     ))}
                     </div>

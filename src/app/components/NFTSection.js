@@ -113,7 +113,7 @@ function NFTSection() {
                 <div className="flex justify-center">
                     <div className="absolute w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 lg:right-16 xl:right-30 h-fit mt-2 lg:mt-5 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
                         <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
-                        <img className="object-cover z-0" src='/wiznft.png' />
+                        <img className="object-cover z-0" src='/wiznft.png' alt="wiznft"/>
                         {/* <div className="absolute w-full h-full mt-32 bg-black z-40 opacity-40"></div> */}
                             {layout.items.map((item) => (
                             <div
@@ -128,7 +128,7 @@ function NFTSection() {
                     </div>
                 </div>
             </div>
-            <img className="object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 h-full" src='/wiznft.png' />
+            <img className="object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 h-full" src='/wiznft.png' alt="wiznft"/>
             <div className="lg:hidden relative lg:absolute flex flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black mt-6 font-baloo text-lg text-black text-center w-full h-fit">
                 <div className="w-full px-8 py-4 leading-6">
                     <p>
