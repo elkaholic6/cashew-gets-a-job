@@ -34,7 +34,7 @@ export default async function SingleBlogPage({ params }) {
             console.error("Data or data.products is undefined. Check your query and API response.");
             return (
                 <div>
-                    <MiniNavBar />
+                    <NavBar />
                     <p>Error loading products. Please try again later.</p>
                 </div>
             );
@@ -43,7 +43,7 @@ export default async function SingleBlogPage({ params }) {
         console.error("Error fetching products: ", error);
         return (
             <div>
-                <MiniNavBar />
+                <NavBar />
                 <p>Error loading products. Please try again later.</p>
             </div>
         );

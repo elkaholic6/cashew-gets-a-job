@@ -118,7 +118,7 @@ function page() {
                         href="https://niftyis.land/Cashew/0"
                         className="absolute w-9/12 xs:w-1/2 sm:w-[40%] max-w-[445px] flex items-center justify-center bottom-[40%] left-1/2 -translate-x-1/2 bg-[#5cffa5] hover:bg-[#84ffbb] text-gray-900 font-baloo text-xl lg:text-3xl px-4 py-1 border-2 border-gray-900 rounded-full"
                     >
-                        Explore Cashew's Island!
+                        Explore Cashew&apos;s Island!
                     </a>
                 </div>
             </div>

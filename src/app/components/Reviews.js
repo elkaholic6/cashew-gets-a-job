@@ -150,10 +150,10 @@ const Reviews = () => {
                           </div>
                         </div>
                         <div>
-                          <h3 className="flex justify-center text-black text-2xl 2xl:text-5xl py-4">"{review.highlight}"</h3>
+                          <h3 className="flex justify-center text-black text-2xl 2xl:text-5xl py-4">&quot;{review.highlight}&quot;</h3>
                         </div>
                         <div className="flex items-center text-black text-lg 2xl:text-3xl px-4 h-full w-fit">
-                          <p>"{review.review}"</p>
+                          <p>&quot;{review.review}&quot;</p>
                         </div>
                       </div>
                     </div>

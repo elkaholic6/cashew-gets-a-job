@@ -129,7 +129,7 @@ function Book() {
                 <div className="w-4/5 md:w-1/2 max-h-full">
                   <h1 className="md:hidden text-4xl 2xs:text-5xl xs:text-6xl text-[#ffd500] uppercase font-outline-1 md:font-outline-2">Cashew Keeps Going</h1>
                   <div className="hidden xs:block">
-                    <p className="font-baloo text-lg md:text-3xl xl:text-4xl 2xl:text-5xl text-[#333333] pt-2 pb-4 px-6">Cashew is back in this exciting sequel to her first book. Despite her best efforts, she still hasn't found the perfect job! Picking up right where she left off, Cashew faces new challenges in her continued journey.</p>
+                    <p className="font-baloo text-lg md:text-3xl xl:text-4xl 2xl:text-5xl text-[#333333] pt-2 pb-4 px-6">Cashew is back in this exciting sequel to her first book. Despite her best efforts, she still hasn&apos;t found the perfect job! Picking up right where she left off, Cashew faces new challenges in her continued journey.</p>
                   </div>
                   <div className="mt-6 xs:mt-0 mb-0 xs:mb-4 sm:mb-0 sm:-10 flex items-center justify-center gap-x-6">
                     <a
