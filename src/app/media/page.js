@@ -69,9 +69,9 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-fit h-fit justify-center">
                                     <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-10 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                        <div className="relative w-full h-full aspect-[16/9]">
+                                        {/* <div className="relative w-full h-full">
                                             <Image src="/wallpaper_1.png" alt="wallpaper" width={337} height={600} placeholder="empty"/>
-                                        </div>
+                                        </div> */}
                                         <div className="w-fit h-fit object-cover" >
                                             <Image src="/wallpaper_2.png" alt="wallpaper2" width={1080} height={1920} />
                                         </div>
