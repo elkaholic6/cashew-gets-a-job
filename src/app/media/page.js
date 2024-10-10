@@ -49,15 +49,15 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-full h-full justify-center">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                            <img src="/banner_1.png" className="w-full h-fit object-cover" alt="banner" />
-                                            <img src="/banner_2.png" className="w-full h-fit object-cover" alt="banner2" />
-                                            <img src="/banner_3.png" className="w-full h-fit object-cover" alt="banner3" />
-                                            <img src="/banner_4.png" className="w-full h-fit object-cover" alt="banner4" />
-                                            <img src="/banner_5.png" className="w-full h-fit object-cover" alt="banner5" />
-                                            <img src="/banner_6.png" className="w-full h-fit object-cover" alt="banner6" />
-                                            <img src="/banner_7.png" className="w-full h-fit object-cover" alt="banner7" />
-                                            <img src="/banner_8.png" className="w-full h-fit object-cover" alt="banner8" />
-                                            <img src="/banner_9.png" className="w-full h-fit object-cover" alt="banner9" />
+                                            <img src="/banner_1.png" className="w-fit h-fit object-cover" alt="banner" />
+                                            <img src="/banner_2.png" className="w-fit h-fit object-cover" alt="banner2" />
+                                            <img src="/banner_3.png" className="w-fit h-fit object-cover" alt="banner3" />
+                                            <img src="/banner_4.png" className="w-fit h-fit object-cover" alt="banner4" />
+                                            <img src="/banner_5.png" className="w-fit h-fit object-cover" alt="banner5" />
+                                            <img src="/banner_6.png" className="w-fit h-fit object-cover" alt="banner6" />
+                                            <img src="/banner_7.png" className="w-fit h-fit object-cover" alt="banner7" />
+                                            <img src="/banner_8.png" className="w-fit h-fit object-cover" alt="banner8" />
+                                            <img src="/banner_9.png" className="w-fit h-fit object-cover" alt="banner9" />
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-full">
