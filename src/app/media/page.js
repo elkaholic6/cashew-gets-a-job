@@ -51,15 +51,33 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-full h-full justify-center">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                            <Image src="/banner_1.png" className="w-fit h-fit object-cover" alt="banner" width={1200} height={400} />
-                                            <Image src="/banner_2.png" className="w-fit h-fit object-cover" alt="banner2" width={1200} height={400} />
-                                            <Image src="/banner_3.png" className="w-fit h-fit object-cover" alt="banner3" width={1200} height={400} />
-                                            <Image src="/banner_4.png" className="w-fit h-fit object-cover" alt="banner4" width={1200} height={400} />
-                                            <Image src="/banner_5.png" className="w-fit h-fit object-cover" alt="banner5" width={1200} height={400} />
-                                            <Image src="/banner_6.png" className="w-fit h-fit object-cover" alt="banner6" width={1200} height={400} />
-                                            <Image src="/banner_7.png" className="w-fit h-fit object-cover" alt="banner7" width={1200} height={400} />
-                                            <Image src="/banner_8.png" className="w-fit h-fit object-cover" alt="banner8" width={1200} height={400} />
-                                            <Image src="/banner_9.png" className="w-fit h-fit object-cover" alt="banner9" width={1200} height={400} />
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_1.png" alt="banner" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_2.png" alt="banner2" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_3.png" alt="banner3" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_4.png" alt="banner4" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_5.png" alt="banner5" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_6.png" alt="banner6" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_7.png" alt="banner7" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_8.png" alt="banner8" width={1200} height={400} placeholder="empty"/>
+                                        </div>
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/banner_9.png" alt="banner9" width={1200} height={400} placeholder="empty"/>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-full">
