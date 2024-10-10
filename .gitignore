@@ -2,6 +2,11 @@
 
 /src/app/shop
 /src/app/products
+/src/app/components/IndividualCartItem.js
+/src/app/components/ProductForm.js
+/src/app/components/ProductList.js
+/src/app/components/ProductOptions.js
+/src/app/components/ProductPageContent.js
 
 # dependencies
 /node_modules
