@@ -1,4 +1,4 @@
-// import img from 'next/img';
+// import Image from 'next/Image';
 
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
@@ -40,7 +40,7 @@ function page() {
                     </div>
                     {/* Games */}
                     <div className="flex justify-center h-full w-full">
-                        <div className="flex flex-col w-full lg:right-16 xl:right-30 mt-2 lg:mt-5 rounded-lg overflow-hidden pl-4 pt-10 lg:pt-20">
+                        <div className="flex flex-col w-full lg:right-16 xl:right-30 mt-2 lg:mt-5 rounded-lg overflow-hidden pt-10 lg:pt-20">
                             <div className="flex flex-col z-10">
                                 <div className="flex justify-center w-full">
                                     <h1 className="flex justify-start w-[90%] lg:w-[80%] text-6xl font-bold font-mouse py-3">
