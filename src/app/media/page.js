@@ -9,10 +9,6 @@ function page() {
 
     return (
     <>
-        <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Media</title>
-        </Head>
         <div id="games" className="flex flex-col h-fit min-h-screen">
             <div className="bg-gradient-to-b from-sky-700 from-20% via-[#d987c2] via-75% to-[#f1be4d] to-100%">
                 <NavBar />
@@ -73,8 +69,8 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-fit h-fit justify-center">
                                     <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-10 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                        <div className="relative w-full h-[600px] object-contain">
-                                            <Image src="/wallpaper_1.png" alt="wallpaper" style={{objectFit: "contain"}} fill sizes="100vw" />
+                                        <div className="relative w-full h-full aspect-[16/9]">
+                                            <Image src="/wallpaper_1.png" alt="wallpaper" width={337} height={600} placeholder="empty"/>
                                         </div>
                                         <div className="w-fit h-fit object-cover" >
                                             <Image src="/wallpaper_2.png" alt="wallpaper2" width={1080} height={1920} />
