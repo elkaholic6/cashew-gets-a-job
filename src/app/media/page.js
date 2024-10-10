@@ -67,31 +67,31 @@ function page() {
                                             Wallpapers
                                     </h1>
                                 </div>
-                                <div className="flex flex-wrap w-fit h-fit justify-center">
+                                <div className="flex flex-wrap w-full h-fit justify-center">
                                     <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-10 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                        <div className="relative w-full h-full">
+                                        <div className="relative flex justify-center w-full h-full">
                                             <Image src="/wallpaper_1.png" alt="wallpaper" width={337} height={600} placeholder="empty"/>
                                         </div>
-                                        {/* <div className="w-fit h-fit object-cover" >
-                                            <Image src="/wallpaper_2.png" alt="wallpaper2" width={1080} height={1920} />
-                                        </div> */}
-                                        <div className="w-fit h-fit object-cover">
-                                            <Image src="/wallpaper_3.png" alt="wallpaper3" width={1080} height={1920} />
+                                        <div className="relative flex justify-center w-full h-full" >
+                                            <Image src="/wallpaper_2.png" alt="wallpaper2" width={337} height={600} placeholder="empty" />
                                         </div>
-                                        <div className="w-fit h-fit object-cover" >
-                                            <Image src="/wallpaper_4.png" alt="wallpaper4" width={1080} height={1920} />
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/wallpaper_3.png" alt="wallpaper3" width={337} height={600} placeholder="empty" />
                                         </div>
-                                        <div className="w-fit h-fit object-cover" >
-                                            <Image src="/wallpaper_5.png" alt="wallpaper5" width={1080} height={1920} />
+                                        <div className="relative flex justify-center w-full h-full" >
+                                            <Image src="/wallpaper_4.png" alt="wallpaper4" width={337} height={600} placeholder="empty" />
                                         </div>
-                                        <div className="w-fit h-fit object-cover" >
-                                            <Image src="/wallpaper_6.png" alt="wallpaper6" width={1080} height={1920} />
+                                        <div className="relative flex justify-center w-full h-full" >
+                                            <Image src="/wallpaper_5.png" alt="wallpaper5" width={337} height={600} placeholder="empty" />
                                         </div>
-                                        <div className="w-fit h-fit object-cover">
-                                            <Image src="/wallpaper_7.png" alt="wallpaper7" width={1080} height={1920} />
+                                        <div className="relative flex justify-center w-full h-full" >
+                                            <Image src="/wallpaper_6.png" alt="wallpaper6" width={337} height={600} placeholder="empty" />
                                         </div>
-                                        <div  className="w-fit h-fit object-cover">
-                                            <Image src="/wallpaper_8.png" alt="wallpaper8" width={1080} height={1920} />
+                                        <div className="relative flex justify-center w-full h-full">
+                                            <Image src="/wallpaper_7.png" alt="wallpaper7" width={337} height={600} placeholder="empty" />
+                                        </div>
+                                        <div  className="relative flex justify-center w-full h-full">
+                                            <Image src="/wallpaper_8.png" alt="wallpaper8" width={337} height={600} placeholder="empty" />
                                         </div>
                                     </div>
                                 </div>
