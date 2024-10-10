@@ -11,6 +11,7 @@ function page() {
     <>
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Media</title>
         </Head>
         <div id="games" className="flex flex-col h-fit min-h-screen">
             <div className="bg-gradient-to-b from-sky-700 from-20% via-[#d987c2] via-75% to-[#f1be4d] to-100%">
