@@ -29,10 +29,8 @@ async function page() {
     }
     data = await storeQuery(queryAllBlogs);
 
-    console.log("data on page.js", data.blogs.edges[1].node.articles.edges);
     spacesArr = data.blogs.edges[1].node.articles.edges;
     spacesArr.reverse();
-    console.log("spacesArr", spacesArr);
 
     return (
         <div id="updates" className="flex flex-col h-fit min-h-screen bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
