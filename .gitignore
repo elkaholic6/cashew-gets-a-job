@@ -7,6 +7,7 @@
 /src/app/components/ProductList.js
 /src/app/components/ProductOptions.js
 /src/app/components/ProductPageContent.js
+/src/app/layout.js
 /context/shopContext.js
 
 # dependencies
