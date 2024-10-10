@@ -73,8 +73,8 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-fit h-fit justify-center">
                                     <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-10 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                        <div className="relative w-fit h-fit object-cover">
-                                            <Image src="/wallpaper_1.png" alt="wallpaper" style={{objectFit: "contain"}} fill sizes="(min-width: 1024px) 80vw, 90vw" />
+                                        <div className="relative w-full h-[600px] object-contain">
+                                            <Image src="/wallpaper_1.png" alt="wallpaper" style={{objectFit: "contain"}} fill sizes="100vw" />
                                         </div>
                                         <div className="w-fit h-fit object-cover" >
                                             <Image src="/wallpaper_2.png" alt="wallpaper2" width={1080} height={1920} />
