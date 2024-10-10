@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Head from 'next/head';
 
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
@@ -7,6 +8,11 @@ import NavBar from '../components/NavBar';
 function page() {
 
     return (
+    <>
+        <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Your App Title</title>
+        </Head>
         <div id="games" className="flex flex-col h-fit min-h-screen">
             <div className="bg-gradient-to-b from-sky-700 from-20% via-[#d987c2] via-75% to-[#f1be4d] to-100%">
                 <NavBar />
@@ -104,6 +110,7 @@ function page() {
                 <Footer />
             </div>
         </div>
+        </>
       )
 }
 
