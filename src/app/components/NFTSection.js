@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import Image from 'next/image'
 import gsap from 'gsap';
 import { Flip } from 'gsap/Flip';
 import { useGSAP } from '@gsap/react';
 
-const wrapImages = gsap.utils.wrap(['/artnft.png', '/clownnft.png', '/cybrog_v2nft.png', '/fairynft.png', '/heronft.png', 'indiana_jonesnft.png', 'wiznft.png']);
+const wrapImages = gsap.utils.wrap(['/artnft.png', '/clownnft.png', '/cybrog_v2nft.png', '/fairynft.png', '/heronft.png', '/indiana_jonesnft.png', '/wiznft.png']);
 
 function NFTSection() {
   const el = useRef();
@@ -113,7 +114,7 @@ function NFTSection() {
                 <div className="flex justify-center">
                     <div className="absolute w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 lg:right-16 xl:right-30 h-fit mt-2 lg:mt-5 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
                         <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
-                        <img className="object-cover z-0" src='/wiznft.png' alt="wiznft"/>
+                        <Image className="object-cover z-0" src='/wiznft.png' alt="wiznft" width={2048} height={2048} />
                         {/* <div className="absolute w-full h-full mt-32 bg-black z-40 opacity-40"></div> */}
                             {layout.items.map((item) => (
                             <div
@@ -121,14 +122,14 @@ function NFTSection() {
                                 key={item.id}
                                 className="box absolute"
                             >
-                                <img className="object-cover" src={item.image} alt={`NFT ${item.id}`} />
+                                <Image className="object-cover" src={item.image} alt={`NFT ${item.id}`} width={2048} height={2048}/>
                             </div>
                             ))}
                         </div>
                     </div>
                 </div>
             </div>
-            <img className="object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 h-full" src='/wiznft.png' alt="wiznft"/>
+            <Image className="object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 h-full" src='/wiznft.png' alt="wiznft" width={2048} height={2048}/>
             <div className="lg:hidden relative lg:absolute flex flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black mt-6 font-baloo text-lg text-black text-center w-full h-fit">
                 <div className="w-full px-8 py-4 leading-6">
                     <p>

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image'
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 
@@ -49,20 +50,26 @@ function Book() {
       <div className="horizontal flex flex-row w-[100%] object-cover bg-transparent overflow-x-hidden">
         {/* Book 1 */}
         <div className="book book1 h-full w-[100vw] shrink-0 relative flex flex-col justify-center z-10">
-          <img
+          <Image
           className="w-full object-contain z-40 sm:hidden"
           src="/smBook.svg" 
           alt="smBook"
+          width={500}
+          height={500}
           />
-          <img
+          <Image
           className="hidden sm:block lg:hidden w-full object-contain z-40"
           src="/mdBook.svg" 
           alt="mdBook"
+          width={500}
+          height={500}
           />
-          <img
+          <Image
           className="hidden lg:block w-full object-contain z-40"
           src="/Book.svg" 
           alt="Book"
+          width={500}
+          height={500}
           />
           <div className="absolute w-full h-full pb-4 pt-12 bottom-0 text-center z-50 font-mouse">
             <div className="relative h-full flex flex-col justify-center">
@@ -86,10 +93,12 @@ function Book() {
                 </div>
                 <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[30%] xl:w-1/3">
                   <div className="flex items-center max-w-lg border md:border-2 border-[#333333] rounded-full overflow-hidden mb-6 mt-12 xs:mt-6 ">
-                      <img
+                      <Image
                         src="/cashewgetsajobcircle.webp"
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                         alt="cashewgetsajobcircle"
+                        width={500}
+                        height={500}
                       />
                   </div>
                   <div className="flex items-center justify-center">
@@ -107,20 +116,26 @@ function Book() {
         </div>
         {/* Book 2 */}
         <div className="book book2 h-full w-[100vw] shrink-0 relative flex flex-col justify-center z-20">
-          <img
+          <Image
           className="w-full object-contain z-40 sm:hidden"
           src="/smRedBook.svg" 
           alt="smRedBook"
+          width={500}
+          height={500}
           />
-          <img
+          <Image
           className="hidden sm:block lg:hidden w-full object-contain z-40"
           src="/mdRedBook.svg" 
           alt="mdRedBook"
+          width={500}
+          height={500}
           />
-          <img
+          <Image
           className="hidden lg:block w-full object-contain z-40"
           src="/bookRed.svg" 
           alt="bookRed"
+          width={500}
+          height={500}
           />
           <div className="absolute w-full h-full pb-4 pt-12  bottom-0 text-center z-50 font-mouse">
             <div className="relative h-full flex flex-col justify-center">
@@ -144,10 +159,12 @@ function Book() {
                 </div>
                 <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[30%] xl:w-1/3">
                   <div className="flex items-center max-w-lg border md:border-2 border-[#333333] rounded-full overflow-hidden mb-6 mt-12 xs:mt-6 ">
-                      <img
+                      <Image
                         src="/Cashewkeepsgoingpic.webp"
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                         alt="Cashewkeepsgoingpic"
+                        width={500}
+                        height={500}
                       />
                   </div>
                   <div className="flex items-center justify-center">

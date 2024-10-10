@@ -1,6 +1,9 @@
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
-import { formatDateTime } from '../../../utils/helpers';
+
+import Image from 'next/image';
+import UnderConstruction from '../under-construction';
+import NotFound from '../not-found';
 
 import queryPage from '../queryLib/queryPage';
 import { storefront } from '../../../utils/index';
@@ -27,14 +30,14 @@ async function page() {
     }
     try {
         const response = await storefront(queryPage, { handle: "legal" });
+        console.log("response", response);
         data = response.data;
   
         if (!data || !data.page) {
             console.error("Data or data.page is undefined. Check your query and API response.");
             return (
                 <div>
-                    <NavBar />
-                    <p>Error loading products. Please try again later.</p>
+                    <UnderConstruction />
                 </div>
             );
         }
@@ -42,8 +45,7 @@ async function page() {
         console.error("Error fetching products: ", error);
         return (
             <div>
-                <NavBar />
-                <p>Error loading products. Please try again later.</p>
+                <NotFound />
             </div>
         );
     }
@@ -67,17 +69,21 @@ async function page() {
                     />
                     </div>
                     <div className="absolute left-0 sm:left-5 flex items-center justify-start">
-                        <img 
+                        <Image 
                             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
                             src="/cloud1.svg" 
                             alt="cloud"
+                            width={500}
+                            height={500}
                         />
                     </div>
                     <div className="absolute h-full top-96 right-0 sm:right-5 flex items-center justify-end">
-                        <img 
+                        <Image 
                             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
                             src="/cloud2.svg" 
                             alt="cloud"
+                            width={500}
+                            height={500}
                         />
                     </div>
                     <div

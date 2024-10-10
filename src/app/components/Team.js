@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from "react";
+import Image from 'next/image'
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 import gsap from 'gsap';
@@ -111,19 +112,23 @@ const Team = () => {
                                         perspective: '1000px',
                                         transformStyle: 'preserve-3d'
                                         }}>
-                                        <img
+                                        <Image
                                             src={team.image}
                                             className="h-full w-full object-cover object-center z-10 border border-gray-600 rounded-md"
                                             alt={team.name}
+                                            width={500}
+                                            height={500}
                                         />
                                     <div 
                                         className="absolute -inset-[22px] xs:-inset-7 sm:-inset-6 md:-inset-6 lg:-inset-[22px] xl:-inset-6 2xl:-inset-7 h-[116%] w-[116%] -z-10 bg-black bg-opacity-25 border border-gray-600 rounded-md shadow-[0_16px_20px_-8px_rgb(0,0,0,0.3)] overflow-hidden"
                                         style={{ transform: `translateZ(-20px)` }}
                                     >
-                                        <img
+                                        <Image
                                             src={team.image}
                                             className="h-full w-full object-cover object-center blur-xl opacity-70"
                                             alt={team.name}
+                                            width={500}
+                                            height={500}
                                         />
                                     </div>
                                 </div>

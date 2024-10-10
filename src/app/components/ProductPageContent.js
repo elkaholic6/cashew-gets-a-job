@@ -19,12 +19,14 @@ console.log("product: ", product)
     const product = item.node;
     images.push(
     //   <SwiperSlide key={`slide-${product.image.id}`}>
-        <img 
+        <Image 
             key={`image-${product.image.id}`} 
             src={product.image.transformedSrc} 
             layout="fill" 
             className="rounded-lg shadow-lg" 
             alt={product.title}
+            width={500}
+            height={500}
         />
     //   </SwiperSlide>
     )

@@ -7,25 +7,24 @@ function SlideOverCart({ subtotal, totalAmount, quantity, title, image, price, i
     const [cartItems, setCartItems] = useState([]);
     const [retrievedSubtotal, setRetrievedSubtotal] = useState(0);
 
-    // Fetch cart items from localStorage when the component mounts
     useEffect(() => {
         const fetchCartData = async (checkoutId) => {
             try {
                 const cartData = await cartQuery(checkoutId);
-                return cartData; // Return the resolved data
+                return cartData;
             } catch (error) {
                 console.error("Error fetching cart data:", error);
-                return null; // Handle errors and return null or empty data
+                return null;
             }
         };
 
         const fetchTitleData = async (id) => {
             try {
                 const titleData = await titleQuery(id);
-                return titleData; // Return the resolved data
+                return titleData;
             } catch (error) {
                 console.error("Error fetching title data:", error);
-                return null; // Handle errors and return null or empty data
+                return null;
             }
         }
 
@@ -34,18 +33,14 @@ function SlideOverCart({ subtotal, totalAmount, quantity, title, image, price, i
             let cartArray = [];
             if (storedCart) {
                 const [retrievedItem, retrievedCheckout] = JSON.parse(storedCart);
-                console.log("retrievedItem", retrievedItem);
-                console.log("retrievedCheckout", retrievedCheckout);
                 
-                const retrievedCart = await fetchCartData(retrievedCheckout.id); // Await the async call
-                console.log("retrievedCart", retrievedCart);
+                const retrievedCart = await fetchCartData(retrievedCheckout.id);
 
                 let cartSize = retrievedCart.lines.edges.length;
 
                 for(let i = 0; i < cartSize; i++) {
                     let singleItemArray = [];
                     const retrievedTitle = await fetchTitleData(retrievedCart.lines.edges[i].node.merchandise.product.id);
-                    console.log("retrievedTitle", retrievedTitle);
                     //1. image 2. title 3. price 4. quantity
                     singleItemArray.push(retrievedTitle.images.edges[0].node.url);
                     singleItemArray.push(retrievedTitle.title);
@@ -54,23 +49,10 @@ function SlideOverCart({ subtotal, totalAmount, quantity, title, image, price, i
                     cartArray.push(singleItemArray);
                 }
 
-                // console.log('singleItemArray', singleItemArray);
-                // const retrievedTitle = await fetchTitleData(retrievedCart.lines.edges[0].node.merchandise.product.id);
-                // console.log("retrievedTitle", retrievedTitle);
-                // //1. image 2. title 3. price 4. quantity
-                // singleItemArray.push(retrievedTitle.images.edges[0].node.url);
-                // singleItemArray.push(retrievedTitle.title);
-                // singleItemArray.push(retrievedCart.cost.subtotalAmount.amount);
-                // singleItemArray.push(retrievedCart.lines.edges[0].node.quantity);
-
-                console.log("cartArray", cartArray);
-                // Assuming `retrievedCart` has a `lines` property for cart items
                 if(cartItems.length === 0) {
                     setCartItems(cartArray || []);
-                    // setCartItems(retrievedCheckout.lines.edges || []);
                 } else {
                     setCartItems(prevCartItems => [...prevCartItems, cartArray]);
-                    // setCartItems(prevCartItems => [...prevCartItems, retrievedCheckout.lines.edges]);
                 }
                 setRetrievedSubtotal(retrievedCheckout.cost.subtotalAmount.amount || 0);
             }
@@ -87,29 +69,10 @@ function SlideOverCart({ subtotal, totalAmount, quantity, title, image, price, i
   return (
     isOpen &&
     <div className="relative z-50" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-            {/* Background backdrop, show/hide based on slide-over state.
-
-            Entering: "ease-in-out duration-500"
-            From: "opacity-0"
-            To: "opacity-100"
-            Leaving: "ease-in-out duration-500"
-            From: "opacity-100"
-            To: "opacity-0" */}
         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-
         <div className="fixed inset-0 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden">
             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                {/* <!--
-                Slide-over panel, show/hide based on slide-over state.
-
-                Entering: "transform transition ease-in-out duration-500 sm:duration-700"
-                    From: "translate-x-full"
-                    To: "translate-x-0"
-                Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
-                    From: "translate-x-0"
-                    To: "translate-x-full"
-                --> */}
                 <div className="pointer-events-auto w-screen max-w-md">
                 <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                     <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">

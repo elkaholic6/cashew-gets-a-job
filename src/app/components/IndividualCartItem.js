@@ -1,11 +1,12 @@
 import React from 'react'
+import Image from 'next/image';
 
 function IndividualCartItem({ image, title, price, quantity }) {
   return (
     <div>
         <li className="flex py-6">
             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                <img src={image} className="h-full w-full object-cover object-center" alt={title} />
+                <Image src={image} className="h-full w-full object-cover object-center" alt={title} width={500} height={500}/>
             </div>
 
             <div className="ml-4 flex flex-1 flex-col">

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import { useRouter, usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -111,7 +112,6 @@ function NavBar() {
 
     useGSAP((context, contextSafe) => {
       if (slideoutListener) {
-        console.log('slideoutListener: ', slideoutListener);
         gsap.to(slideOutRef.current, { duration: 0.7, xPercent: 100, ease: 'power3.out' })
       } else {
         gsap.to(slideOutRef.current, { duration: 0.7, xPercent: 0, ease: 'power3.in' })
@@ -154,9 +154,9 @@ function NavBar() {
             >
               <span className="sr-only">Open main menu</span>
               {!mobileMenuOpen ? (
-                  <img src='/cashewlogo.png' aria-hidden="true" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 mt-6 mr-6 rounded-full border border-black" alt="logo"/>
+                  <Image src='/cashewlogo.png' aria-hidden="true" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 mt-6 mr-6 rounded-full border border-black" alt="logo" width={500} height={500}/>
                 ) : (
-                  <img src='/cashewlogo.png' aria-hidden="true" className="hidden" alt="logo"/>
+                  <Image src='/cashewlogo.png' aria-hidden="true" className="hidden" alt="logo" width={500} height={500}/>
                 )
               }
             </button>
@@ -262,10 +262,12 @@ function NavBar() {
                   <div className="w-full h-fit">
                     <a href="#home" className="flex justify-center -mx-1.5 px-1.5">
                       <span className="sr-only">Cashew Gets A Job</span>
-                      <img
+                      <Image
                           alt="cashew logo"
                           src="/CashewLogo.png"
                           className="h-20 w-auto rounded-full border border-black"
+                          width={500}
+                          height={500}
                       />
                     </a>
                   </div>
@@ -362,10 +364,12 @@ function NavBar() {
                   <div className="w-full h-fit">
                     <a href="#home" className="flex justify-center -mx-1.5 px-1.5">
                       <span className="sr-only">Cashew Gets A Job</span>
-                      <img
+                      <Image
                           alt="cashew logo"
                           src="/CashewLogo.png"
                           className="h-20 w-auto rounded-full border border-black"
+                          width={500}
+                          height={500}
                       />
                     </a>
                   </div>

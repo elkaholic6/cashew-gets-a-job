@@ -3,6 +3,9 @@ import NavBar from '../components/NavBar';
 import { storefront } from '../../../utils/index';
 import productsQuery from '../products/queryLib/productsQuery';
 
+import UnderConstruction from '../under-construction';
+import NotFound from '../not-found';
+
 
 
 export default async function Shop() {
@@ -16,8 +19,7 @@ export default async function Shop() {
           console.error("Data or data.products is undefined. Check your query and API response.");
           return (
               <div>
-                  <NavBar />
-                  <p>Error loading products. Please try again later.</p>
+                  <UnderConstruction />
               </div>
           );
       }
@@ -25,8 +27,7 @@ export default async function Shop() {
       console.error("Error fetching products: ", error);
       return (
           <div>
-              <NavBar />
-              <p>Error loading products. Please try again later.</p>
+              <NotFound />
           </div>
       );
   }

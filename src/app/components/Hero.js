@@ -1,6 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
+
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -101,17 +103,21 @@ export default function Hero() {
           />
         </div>
         <div className="absolute top-18 left-5 right-0 flex items-center justify-start">
-          <img 
+          <Image 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud1.svg" 
             alt="cloud1"
+            width={500}
+            height={500}
           />
         </div>
         <div className="absolute bottom-60 left-25 right-1 flex items-center justify-end">
-          <img 
+          <Image 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud2.svg" 
             alt="cloud2"
+            width={500}
+            height={500}
           />
         </div>
         <div className="flex mx-full justify-center py-32">

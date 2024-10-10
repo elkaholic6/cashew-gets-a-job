@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import Image from 'next/image'
 import gsap from 'gsap';
 import { Flip } from 'gsap/Flip';
 import { useGSAP } from '@gsap/react';
@@ -96,23 +97,15 @@ function BookPages() {
             <div className="flex justify-center">
               <div className="absolute w-[95%] md:w-3/4 max-w-[2048px] h-fit my-4 sm:mt-4 xl:mt-6 2xl:mt-8 bg-cyan-300 z-30 border-none sm:border-[8px] md:border-[16px] border-cyan-300 rounded-xl overflow-hidden shadow-[0_0px_25px_-3px_rgba(0,0,0,0.4)]">
                   <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
-                  <img className="object-cover z-0 invisible" src='/rockstar.png'   alt="Rockstar" />
+                  <Image className="object-cover z-0 invisible" src='/rockstar.png'   alt="Rockstar" width={2048} height={2048}/>
                   <div className="absolute flex w-full h-full leading-none z-[90] border-2 border-gray-700 rounded-xl overflow-hidden">
-                      {/* <p>
-                            When life gets ruff,<br />
-                            pawsitivity leads the way!
-                      </p> */}
-                      {/* <button className="outline outline-4 px-4 py-2 mt-20 text-4xl lg:text-6xl rounded-full">Collect</button> */}
-                  
-                  {/* <div className="absolute w-full h-full bg-black z-40 opacity-20"></div> */}
-
                           {layout.items.map((item) => (
                           <div
                               id={`box-${item.id}`}
                               key={item.id}
                               className="box absolute"
                           >
-                              <img className="object-cover rounded-xl overflow-hidden" src={item.image} alt={`NFT ${item.id}`} />
+                              <Image className="object-cover rounded-xl overflow-hidden" src={item.image} alt={`NFT ${item.id}`} width={2048} height={2048}/>
                           </div>
                           ))}
                   </div>
@@ -121,7 +114,7 @@ function BookPages() {
               </div>
             </div>
         </div>
-        <img className="relative object-cover z-0 w-[95%] py-4 xl:py-6 2xl:py-8 md:w-3/4 invisible" src='/zookeeper.png' alt="Zookeeper"/>
+        <Image className="relative object-cover z-0 w-[95%] py-4 xl:py-6 2xl:py-8 md:w-3/4 invisible" src='/zookeeper.png' alt="Zookeeper" width={2048} height={2048}/>
     </div>
   );
 }

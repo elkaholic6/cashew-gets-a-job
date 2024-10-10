@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import productsQuery from '../products/queryLib/productsQuery';
 // import { useEffect } from 'react';
 import { storefront } from '../../../utils';
@@ -18,10 +19,12 @@ export default function ProductList({ products }) {
                 <Link key={product.handle} href={`/products/${product.handle}`} >
                     <div className="group relative">
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                        <img
+                        <Image
                         src={image.transformedSrc}
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                         alt={product.title}
+                        width={500}
+                        height={500}
                         />
                     </div>
                     <div className="mt-4 flex justify-between">

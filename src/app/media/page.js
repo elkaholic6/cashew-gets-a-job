@@ -1,4 +1,4 @@
-// 'use client';
+import Image from 'next/image';
 
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
@@ -25,18 +25,6 @@ function page() {
                             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ffffff] to-[#3c3c3c] opacity-40 sm:left-[calc(50%-20rem)] sm:w-[72.1875rem]"
                         />
                         </div>
-                        {/* <div className="absolute lg:top-24 left-5 flex items-center justify-start z-0">
-                            <img 
-                                className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
-                                src="/cloud1.svg" 
-                            />
-                        </div>
-                        <div className="absolute -top-36 sm:-top-96 lg:-top-36 sm:-bottom-28 right-5 flex items-center justify-end z-0">
-                            <img 
-                                className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
-                                src="/cloud2.svg" 
-                            />
-                        </div> */}
                     <div
                         aria-hidden="true"
                         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -61,15 +49,15 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-full h-full justify-center">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                            <img src="/banner_1.png" className="w-full h-fit object-cover" alt="banner"/>
-                                            <img src="/banner_2.png" className="w-full h-fit object-cover" alt="banner2"/>
-                                            <img src="/banner_3.png" className="w-full h-fit object-cover" alt="banner3"/>
-                                            <img src="/banner_4.png" className="w-full h-fit object-cover" alt="banner4"/>
-                                            <img src="/banner_5.png" className="w-full h-fit object-cover" alt="banner5"/>
-                                            <img src="/banner_6.png" className="w-full h-fit object-cover" alt="banner6"/>
-                                            <img src="/banner_7.png" className="w-full h-fit object-cover" alt="banner7"/>
-                                            <img src="/banner_8.png" className="w-full h-fit object-cover" alt="banner8"/>
-                                            <img src="/banner_9.png" className="w-full h-fit object-cover" alt="banner9"/>
+                                            <Image src="/banner_1.png" className="w-full h-fit object-cover" alt="banner" width={500} height={500}/>
+                                            <Image src="/banner_2.png" className="w-full h-fit object-cover" alt="banner2" width={500} height={500}/>
+                                            <Image src="/banner_3.png" className="w-full h-fit object-cover" alt="banner3" width={500} height={500}/>
+                                            <Image src="/banner_4.png" className="w-full h-fit object-cover" alt="banner4" width={500} height={500}/>
+                                            <Image src="/banner_5.png" className="w-full h-fit object-cover" alt="banner5" width={500} height={500}/>
+                                            <Image src="/banner_6.png" className="w-full h-fit object-cover" alt="banner6" width={500} height={500}/>
+                                            <Image src="/banner_7.png" className="w-full h-fit object-cover" alt="banner7" width={500} height={500}/>
+                                            <Image src="/banner_8.png" className="w-full h-fit object-cover" alt="banner8" width={500} height={500}/>
+                                            <Image src="/banner_9.png" className="w-full h-fit object-cover" alt="banner9" width={500} height={500}/>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-full">
@@ -79,14 +67,14 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-fit h-fit justify-center">
                                     <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-10 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                            <img src="/wallpaper_1.png" className="w-fit h-fit object-cover" alt="wallpaper"/>
-                                            <img src="/wallpaper_2.png" className="w-fit h-fit object-cover" alt="wallpaper2"/>
-                                            <img src="/wallpaper_3.png" className="w-fit h-fit object-cover" alt="wallpaper3"/>
-                                            <img src="/wallpaper_4.png" className="w-fit h-fit object-cover" alt="wallpaper4"/>
-                                            <img src="/wallpaper_5.png" className="w-fit h-fit object-cover" alt="wallpaper5"/>
-                                            <img src="/wallpaper_6.png" className="w-fit h-fit object-cover" alt="wallpaper6"/>
-                                            <img src="/wallpaper_7.png" className="w-fit h-fit object-cover" alt="wallpaper7"/>
-                                            <img src="/wallpaper_8.png" className="w-fit h-fit object-cover" alt="wallpaper8"/>
+                                            <Image src="/wallpaper_1.png" className="w-fit h-fit object-cover" alt="wallpaper" width={500} height={500}/>
+                                            <Image src="/wallpaper_2.png" className="w-fit h-fit object-cover" alt="wallpaper2" width={500} height={500}/>
+                                            <Image src="/wallpaper_3.png" className="w-fit h-fit object-cover" alt="wallpaper3" width={500} height={500}/>
+                                            <Image src="/wallpaper_4.png" className="w-fit h-fit object-cover" alt="wallpaper4" width={500} height={500}/>
+                                            <Image src="/wallpaper_5.png" className="w-fit h-fit object-cover" alt="wallpaper5" width={500} height={500}/>
+                                            <Image src="/wallpaper_6.png" className="w-fit h-fit object-cover" alt="wallpaper6" width={500} height={500}/>
+                                            <Image src="/wallpaper_7.png" className="w-fit h-fit object-cover" alt="wallpaper7" width={500} height={500}/>
+                                            <Image src="/wallpaper_8.png" className="w-fit h-fit object-cover" alt="wallpaper8" width={500} height={500}/>
                                     </div>
                                 </div>
                                 <div className="flex justify-center w-full">
@@ -97,13 +85,13 @@ function page() {
                                 <div className="flex flex-wrap w-full h-full justify-center pb-4">
                                     <div className="flex flex-col sm:flex-row gap-4 w-[90%] lg:w-[80%] h-full items-center mb-4">
                                         <div className="flex items-center justify-center w-[90%] sm:w-1/3">
-                                            <img src="/gif_1.gif" className="w-fit h-fit object-cover" alt="gif"/>
+                                            <Image src="/gif_1.gif" className="w-fit h-fit object-cover" alt="gif" width={500} height={500}/>
                                         </div>
                                         <div className="flex items-center justify-center w-[90%] sm:w-1/3">
-                                            <img src="/gif_3.gif" className="w-full sm:w-[56%] object-cover" alt="gif3"/>
+                                            <Image src="/gif_3.gif" className="w-full sm:w-[56%] object-cover" alt="gif3" width={500} height={500}/>
                                         </div>
                                         <div className="flex items-center justify-center w-[90%] sm:w-1/3">
-                                            <img src="/gif_2.gif" className="h-fit object-cover" alt="gif2"/>
+                                            <Image src="/gif_2.gif" className="h-fit object-cover" alt="gif2" width={500} height={500}/>
                                         </div>
                                     </div>
                                 </div>
