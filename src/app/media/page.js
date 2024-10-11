@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Head from 'next/head';
 
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
@@ -51,7 +50,7 @@ function page() {
                                 </div>
                                 <div className="flex flex-wrap w-full h-full justify-center">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] lg:w-[80%] h-fit justify-items-center">
-                                        <div className="relative flex justify-center w-full h-full">
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
                                             <Image src="/banner_1.png" alt="banner" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full h-full">

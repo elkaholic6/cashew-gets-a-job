@@ -38,9 +38,9 @@ module.exports = {
       },
       spacing: {
         '1/12': '8.333333%',
+        '1/3-screen': 'calc(90vw / 3)',
       },
       screens: {
-        'nosize': '0px',
         '2xs': '320px',
         'xs': '495px',
       },
