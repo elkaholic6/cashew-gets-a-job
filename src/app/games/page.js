@@ -123,7 +123,7 @@ function page() {
                         width={2560}
                         height={1230}
                         quality={100}
-                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
                         priority
                     />
                     <a
