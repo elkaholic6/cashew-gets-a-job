@@ -96,8 +96,8 @@ function BookPages() {
         <div className="box">
             <div className="flex justify-center">
               <div className="absolute w-[95%] md:w-3/4 max-w-[2048px] h-fit my-4 sm:mt-4 xl:mt-6 2xl:mt-8 bg-cyan-300 z-30 border-none sm:border-[8px] md:border-[16px] border-cyan-300 rounded-xl overflow-hidden shadow-[0_0px_25px_-3px_rgba(0,0,0,0.4)]">
-                  <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
-                  <Image className="object-cover z-0 invisible" src='/rockstar.png'   alt="Rockstar" width={2048} height={2048}/>
+                  <div className="relative w-full h-full flex flex-wrap max-md:h-smbook-pages-screen md:h-mdbook-pages-screen" ref={boxesRef}>
+                  <Image className="object-cover z-0 invisible" src='/rockstar.png' alt="Rockstar" fill={true} sizes="50vw" quality={0}/>
                   <div className="absolute flex w-full h-full leading-none z-[90] border-2 border-gray-700 rounded-xl overflow-hidden">
                           {layout.items.map((item) => (
                           <div
