@@ -38,6 +38,8 @@ module.exports = {
       },
       spacing: {
         '1/12': '8.333333%',
+        'smbook-pages-screen': 'calc(95vw / 1.6)',
+        'mdbook-pages-screen': 'calc(75vw / 1.6)',
         'banner-1-col': 'calc(90vw / 3)',
         'banner-3-col': 'calc(90vw / 9)',
         'wallpaper-smscreen': 'calc(90vw / 0.5626)',

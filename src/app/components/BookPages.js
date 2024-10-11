@@ -105,7 +105,9 @@ function BookPages() {
                               key={item.id}
                               className="box absolute"
                           >
-                              <Image className="object-cover rounded-xl overflow-hidden" src={item.image} alt={`NFT ${item.id}`} width={2048} height={2048}/>
+                            <div className="relative flex justify-center w-[95vw] md:w-[75vw] max-md:h-smbook-pages-screen md:h-mdbook-pages-screen">
+                              <Image className="object-cover rounded-xl overflow-hidden" src={item.image} alt={`NFT ${item.id}`} fill={true} sizes="100vw" quality={100}/>
+                            </div>
                           </div>
                           ))}
                   </div>
