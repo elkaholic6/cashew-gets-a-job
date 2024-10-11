@@ -54,22 +54,22 @@ function Book() {
           className="w-full object-contain z-40 sm:hidden"
           src="/smBook.svg" 
           alt="smBook"
-          width={500}
-          height={500}
+          width={936}
+          height={1678}
           />
           <Image
           className="hidden sm:block lg:hidden w-full object-contain z-40"
           src="/mdBook.svg" 
           alt="mdBook"
-          width={500}
-          height={500}
+          width={936}
+          height={913}
           />
           <Image
           className="hidden lg:block w-full object-contain z-40"
           src="/Book.svg" 
           alt="Book"
-          width={500}
-          height={500}
+          width={936}
+          height={526}
           />
           <div className="absolute w-full h-full pb-4 pt-12 bottom-0 text-center z-50 font-mouse">
             <div className="relative h-full flex flex-col justify-center">
@@ -99,6 +99,7 @@ function Book() {
                         alt="cashewgetsajobcircle"
                         width={500}
                         height={500}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                   </div>
                   <div className="flex items-center justify-center">
@@ -120,22 +121,22 @@ function Book() {
           className="w-full object-contain z-40 sm:hidden"
           src="/smRedBook.svg" 
           alt="smRedBook"
-          width={500}
-          height={500}
+          width={936}
+          height={1678}
           />
           <Image
           className="hidden sm:block lg:hidden w-full object-contain z-40"
           src="/mdRedBook.svg" 
           alt="mdRedBook"
-          width={500}
-          height={500}
+          width={936}
+          height={913}
           />
           <Image
           className="hidden lg:block w-full object-contain z-40"
           src="/bookRed.svg" 
           alt="bookRed"
-          width={500}
-          height={500}
+          width={936}
+          height={526}
           />
           <div className="absolute w-full h-full pb-4 pt-12  bottom-0 text-center z-50 font-mouse">
             <div className="relative h-full flex flex-col justify-center">
