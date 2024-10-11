@@ -51,31 +51,31 @@ function page() {
                                 <div className="flex flex-wrap w-full h-full justify-center">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] lg:w-[80%] h-fit justify-items-center">
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_1.png" alt="banner" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_1.png" alt="banner" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_2.png" alt="banner2" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_2.png" alt="banner2" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_3.png" alt="banner3" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_3.png" alt="banner3" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_4.png" alt="banner4" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_4.png" alt="banner4" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_5.png" alt="banner5" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_5.png" alt="banner5" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_6.png" alt="banner6" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_6.png" alt="banner6" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_7.png" alt="banner7" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_7.png" alt="banner7" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_8.png" alt="banner8" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_8.png" alt="banner8" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-md:h-banner-1-col md:h-banner-3-col">
-                                            <Image src="/banner_9.png" alt="banner9" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
+                                            <Image priority={true} src="/banner_9.png" alt="banner9" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                     </div>
                                 </div>
@@ -87,28 +87,28 @@ function page() {
                                 <div className="flex flex-wrap w-full h-fit justify-center">
                                     <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-10 w-[90%] lg:w-[80%] h-fit justify-items-center">
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
-                                            <Image src="/wallpaper_1.png" alt="wallpaper" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty"/>
+                                            <Image priority={true} src="/wallpaper_1.png" alt="wallpaper" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
-                                            <Image src="/wallpaper_2.png" alt="wallpaper2" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
+                                            <Image priority={true} src="/wallpaper_2.png" alt="wallpaper2" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
-                                            <Image src="/wallpaper_3.png" alt="wallpaper3" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty"/>
+                                            <Image priority={true} src="/wallpaper_3.png" alt="wallpaper3" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
-                                            <Image src="/wallpaper_4.png" alt="wallpaper4" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
+                                            <Image priority={true} src="/wallpaper_4.png" alt="wallpaper4" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
-                                            <Image src="/wallpaper_5.png" alt="wallpaper5" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
+                                            <Image priority={true} src="/wallpaper_5.png" alt="wallpaper5" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
-                                            <Image src="/wallpaper_6.png" alt="wallpaper6" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
+                                            <Image priority={true} src="/wallpaper_6.png" alt="wallpaper6" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
-                                            <Image src="/wallpaper_7.png" alt="wallpaper7" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
+                                            <Image priority={true} src="/wallpaper_7.png" alt="wallpaper7" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
-                                            <Image src="/wallpaper_8.png" alt="wallpaper8" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
+                                            <Image priority={true} src="/wallpaper_8.png" alt="wallpaper8" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                     </div>
                                 </div>
