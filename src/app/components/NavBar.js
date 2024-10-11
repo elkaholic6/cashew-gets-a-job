@@ -122,7 +122,7 @@ function NavBar() {
       gsap.registerPlugin(ScrollTrigger);
 
         const showAnim = gsap.from('.navbar', {
-          yPercent: -100,
+          yPercent: -200,
           paused: true,
           duration: 0.2
         }).progress(1);
@@ -139,9 +139,9 @@ function NavBar() {
 
   return (
     <div className="bg-gray-900 overflow-hidden">
-    <header className={`navbar fixed inset-x-0 top-0 z-[100]`}>
+    <header className={`fixed inset-x-0 top-0 z-[100]`}>
       <nav aria-label="Global" className="mx-0 p-0 lg:mx-auto lg:p-2">
-        <div className="flex flex-row items-center justify-around">
+        <div className="navbar flex flex-row items-center justify-around">
           {/* Mobile menu button */}
           <div className="flex lg:hidden ml-auto">
             <button
@@ -174,7 +174,7 @@ function NavBar() {
             </a>
           </div>
           {/* Desktop menu */}
-          <div className={`hidden lg:flex justify-center w-auto`}>
+          <div className={`navbar hidden lg:flex justify-center w-auto`}>
             <div className="flex justify-center z-[150] w-auto rounded-full border-2 border-purple-400 bg-purple-50 shadow-[0_10px_20px_0px_rgba(0,0,0,0.2)] px-4">
               <div className="flex lg:gap-x-10 mx-6 my-2">
                 <Menu as="div" className="flex relative text-left gap-12 text-3xl xl:text-4xl py-2 font-mouse font-medium tracking-wider text-gray-800">
