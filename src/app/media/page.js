@@ -53,8 +53,8 @@ function page() {
                                         <div className="relative flex justify-center w-full max-md:h-1/3-screen">
                                             <Image src="/banner_1.png" alt="banner" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_2.png" alt="banner2" width={1200} height={400} placeholder="empty"/>
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
+                                            <Image src="/banner_2.png" alt="banner2" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full h-full">
                                             <Image src="/banner_3.png" alt="banner3" width={1200} height={400} placeholder="empty"/>
