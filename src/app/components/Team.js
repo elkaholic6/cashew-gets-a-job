@@ -118,7 +118,6 @@ const Team = () => {
                                             alt={team.name}
                                             width={500}
                                             height={500}
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
                                     <div 
                                         className="absolute -inset-[22px] xs:-inset-7 sm:-inset-6 md:-inset-6 lg:-inset-[22px] xl:-inset-6 2xl:-inset-7 h-[116%] w-[116%] -z-10 bg-black bg-opacity-25 border border-gray-600 rounded-md shadow-[0_16px_20px_-8px_rgb(0,0,0,0.3)] overflow-hidden"
@@ -130,7 +129,6 @@ const Team = () => {
                                             alt={team.name}
                                             width={500}
                                             height={500}
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
                                     </div>
                                 </div>
