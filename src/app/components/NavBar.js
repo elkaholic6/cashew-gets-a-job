@@ -122,7 +122,7 @@ function NavBar() {
       gsap.registerPlugin(ScrollTrigger);
 
         const showAnim = gsap.from('.navbar', {
-          yPercent: -200,
+          yPercent: -150,
           paused: true,
           duration: 0.2
         }).progress(1);
