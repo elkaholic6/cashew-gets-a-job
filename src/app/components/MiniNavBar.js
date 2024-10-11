@@ -44,7 +44,6 @@ function MiniNavBar() {
         <div className="flex flex-row items-center justify-between">
           <div className="flex px-4 font-mouse">
             <Link
-              rel="preconnect"
               href="/"
               className="-mx-3 text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl flex justify-center font-semibold leading-7 text-gray-900 border-2 border-black rounded-full px-6 py-2 bg-gray-100 overflow-hidden cursor-pointer"
               type="button"

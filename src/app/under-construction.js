@@ -9,7 +9,6 @@ export default function UnderConstruction() {
         <p className="text-3xl lg:text-5xl font-mouse text-yellow-400 mt-2">Sorry!</p>
         <p className="text-3xl lg:text-5xl font-mouse">This page is under construction...</p>
         <Link 
-          rel="preconnect"
           className="text-blue-500 font-baloo text-lg lg:text-2xl mt-2"
           href="/">Return Home
         </Link>

@@ -94,7 +94,7 @@ async function page() {
                         <div className="relative flex flex-wrap justify-center items-center flex-col">
                             {blogArr.map((blog, i) => {
                                 return (
-                                    <Link key={i} rel="preconnect" className="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%]" href={`/updates/${blog.node.id.split("/").pop()}`}>
+                                    <Link key={i} className="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%]" href={`/updates/${blog.node.id.split("/").pop()}`}>
                                         <div
                                             className="flex w-full justify-center px-4"
                                         >

@@ -197,7 +197,7 @@ function NavBar() {
                           <div className="py-1">
                             <MenuItem>
                               <Link
-                                rel="preconnect"
+                                
                                 href="/spaces"
                                 className="block px-6 py-4 text-gray-800 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 tracking-wide"
                               >
@@ -206,7 +206,7 @@ function NavBar() {
                             </MenuItem>
                             <MenuItem>
                               <Link
-                                rel="preconnect"
+                                
                                 href="/updates"
                                 className="block px-6 pb-4 text-gray-800 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 tracking-wide"
                               >
@@ -225,7 +225,7 @@ function NavBar() {
                       </a>
                     ) : item.href.startsWith('#') ? (
                       <Link
-                        rel="preconnect"
+                        
                         href={item.href}
                         onClick={(event) => handleNavigationAndAnimation(event, item.href)}
                         className="flex items-center justify-center leading-6 cursor-pointer">
@@ -233,7 +233,7 @@ function NavBar() {
                       </Link>
                     ) : (
                       <Link
-                      rel="preconnect"
+                      
                       href={item.href}
                       className="flex items-center justify-center leading-6 cursor-pointer">
                       {item.name}
@@ -318,7 +318,7 @@ function NavBar() {
                                 </a>
                               ) : item.href.startsWith('#') ? (
                                 <Link
-                                  rel="preconnect"
+                                  
                                   href={item.href}
                                   onClick={(event) => {
                                     setMenuListener(false);
@@ -329,7 +329,7 @@ function NavBar() {
                                 </Link>
                               ) : (
                                 <Link
-                                  rel="preconnect"
+                                  
                                   href={item.href}
                                   onClick={() => {
                                     setMenuListener(false);
@@ -410,7 +410,7 @@ function NavBar() {
                         {newsNavigation.map((item, i) => (
                             <div key={i} className="py-6">
                                 <Link
-                                  rel="preconnect"
+                                  
                                   href={item.href}
                                   onClick={() => {
                                     setSlideoutListener(false);
