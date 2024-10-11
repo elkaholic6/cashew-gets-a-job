@@ -40,7 +40,7 @@ module.exports = {
         '1/12': '8.333333%',
         'banner-1-col': 'calc(90vw / 3)',
         'banner-3-col': 'calc(90vw / 9)',
-        'wallpaper-smscreen': 'calc(90vw * 1.7)',
+        'wallpaper-smscreen': 'calc(90vw / 0.5626)',
         'wallpaper-mdscreen': 'calc(90vw * 0.85)',
         'wallpaper-lgscreen': 'calc(80vw * 0.425)',
       },
