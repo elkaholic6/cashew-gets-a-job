@@ -57,25 +57,25 @@ function page() {
                                             <Image src="/banner_2.png" alt="banner2" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_3.png" alt="banner3" width={1200} height={400} placeholder="empty"/>
+                                            <img src="/banner_3.png" alt="banner3" />
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_4.png" alt="banner4" width={1200} height={400} placeholder="empty"/>
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
+                                            <Image src="/banner_4.png" alt="banner4" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_5.png" alt="banner5" width={1200} height={400} placeholder="empty"/>
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
+                                            <Image src="/banner_5.png" alt="banner5" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_6.png" alt="banner6" width={1200} height={400} placeholder="empty"/>
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
+                                            <Image src="/banner_6.png" alt="banner6" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_7.png" alt="banner7" width={1200} height={400} placeholder="empty"/>
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
+                                            <Image src="/banner_7.png" alt="banner7" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_8.png" alt="banner8" width={1200} height={400} placeholder="empty"/>
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
+                                            <Image src="/banner_8.png" alt="banner8" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_9.png" alt="banner9" width={1200} height={400} placeholder="empty"/>
+                                        <div className="relative flex justify-center w-full max-md:h-1/3-screen">
+                                            <Image src="/banner_9.png" alt="banner9" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                     </div>
                                 </div>
