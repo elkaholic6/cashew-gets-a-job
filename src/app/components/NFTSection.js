@@ -112,7 +112,7 @@ function NFTSection() {
             </div>
             <div className="box">
                 <div className="flex justify-center">
-                    <div className="absolute w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 lg:right-16 xl:right-30 h-fit mt-2 lg:mt-5 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
+                    <div className="absolute max-w-[500px] w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 lg:right-16 xl:right-30 h-fit mt-2 lg:mt-5 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
                         <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
                         <Image className="object-cover z-0" src='/wiznft.png' alt="wiznft" width={500} height={500} />
                         {/* <div className="absolute w-full h-full mt-32 bg-black z-40 opacity-40"></div> */}
