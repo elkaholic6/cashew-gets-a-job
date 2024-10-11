@@ -38,8 +38,11 @@ module.exports = {
       },
       spacing: {
         '1/12': '8.333333%',
-        '1/3-screen': 'calc(90vw / 3)',
-        'wallpaper-screen': 'calc(90vw * 1.7)',
+        'banner-1-col': 'calc(90vw / 3)',
+        'banner-3-col': 'calc(90vw / 9)',
+        'wallpaper-smscreen': 'calc(90vw * 1.7)',
+        'wallpaper-mdscreen': 'calc(90vw * 0.85)',
+        'wallpaper-lgscreen': 'calc(80vw * 0.425)',
       },
       screens: {
         '2xs': '320px',
