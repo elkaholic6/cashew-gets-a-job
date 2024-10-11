@@ -109,6 +109,7 @@ export default function Hero() {
             alt="cloud1"
             width={500}
             height={500}
+            priority
           />
         </div>
         <div className="absolute bottom-60 left-25 right-1 flex items-center justify-end">
@@ -118,6 +119,7 @@ export default function Hero() {
             alt="cloud2"
             width={500}
             height={500}
+            priority
           />
         </div>
         <div className="flex mx-full justify-center py-32">
