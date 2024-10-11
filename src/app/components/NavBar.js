@@ -154,9 +154,9 @@ function NavBar() {
             >
               <span className="sr-only">Open main menu</span>
               {!mobileMenuOpen ? (
-                  <Image src='/cashewlogo.png' aria-hidden="true" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 mt-6 mr-6 rounded-full border border-black" alt="logo" width={500} height={500}/>
+                  <Image src='/cashewlogo.png' aria-hidden="true" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 mt-6 mr-6 rounded-full border border-black" alt="logo" width={80} height={80}/>
                 ) : (
-                  <Image src='/cashewlogo.png' aria-hidden="true" className="hidden" alt="logo" width={500} height={500}/>
+                  <Image src='/cashewlogo.png' aria-hidden="true" className="hidden" alt="logo" width={80} height={80}/>
                 )
               }
             </button>
@@ -266,8 +266,8 @@ function NavBar() {
                           alt="cashew logo"
                           src="/CashewLogo.png"
                           className="h-20 w-auto rounded-full border border-black"
-                          width={500}
-                          height={500}
+                          width={80}
+                          height={80}
                       />
                     </a>
                   </div>
@@ -368,8 +368,8 @@ function NavBar() {
                           alt="cashew logo"
                           src="/CashewLogo.png"
                           className="h-20 w-auto rounded-full border border-black"
-                          width={500}
-                          height={500}
+                          width={80}
+                          height={80}
                       />
                     </a>
                   </div>
