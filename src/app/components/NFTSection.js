@@ -129,7 +129,7 @@ function NFTSection() {
                     </div>
                 </div>
             </div>
-            <Image className="object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 h-full" src='/wiznft.png' alt="wiznft" width={2048} height={2048}/>
+            <Image className="object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 h-full" src='/wiznft.png' alt="wiznft" width={500} height={500} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"/>
             <div className="lg:hidden relative lg:absolute flex flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black mt-6 font-baloo text-lg text-black text-center w-full h-fit">
                 <div className="w-full px-8 py-4 leading-6">
                     <p>
