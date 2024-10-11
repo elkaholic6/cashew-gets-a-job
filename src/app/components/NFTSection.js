@@ -113,23 +113,22 @@ function NFTSection() {
             <div className="box">
                 <div className="flex justify-center">
                     <div className="absolute max-w-[500px] w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 lg:right-16 xl:right-30 h-fit mt-2 lg:mt-5 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
-                        <div className="relative w-full h-full flex flex-wrap" ref={boxesRef}>
-                        <Image className="object-cover z-0" src='/wiznft.png' alt="wiznft" width={750} height={750} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" />
-                        {/* <div className="absolute w-full h-full mt-32 bg-black z-40 opacity-40"></div> */}
+                        <div className="relative w-full h-full flex flex-wrap max-sm:h-nfts-screen sm:h-smnfts-screen md:h-mdnfts-screen lg:h-lgnfts-screen" ref={boxesRef}>
+                        <Image className="object-cover z-0" src='/indianajonesnft.png' alt="indianajonesnft" sizes="(max-width: 640px) 83vw, (max-width: 768px) 50vw, (max-width: 1024px) 40vw, 33vw" layout="fill"/>
                             {layout.items.map((item) => (
                             <div
                                 id={`box-${item.id}`}
                                 key={item.id}
-                                className="box absolute"
+                                className="box absolute w-full h-full"
                             >
-                                <Image className="object-cover" src={item.image} alt={`NFT ${item.id}`} width={750} height={750} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"/>
+                                <Image className="object-cover" src={item.image} alt={`NFT ${item.id}`} sizes="(max-width: 640px) 83vw, (max-width: 768px) 50vw, (max-width: 1024px) 40vw, 33vw" layout="fill"/>
                             </div>
                             ))}
                         </div>
                     </div>
                 </div>
             </div>
-            <Image className="relative object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3" src='/wiznft.png' alt="wiznft" width={750} height={750} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"/>
+            <Image className="relative object-cover z-0 invisible w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3" src='/indianajonesnft.png' alt="indianajonesnft" width={750} height={750} sizes="(max-width: 640px) 83vw, (max-width: 768px) 50vw, (max-width: 1024px) 40vw, 33vw"/>
             <div className="lg:hidden relative lg:absolute flex flex-col justify-center items-start bg-[#ffe350] border-y-2 border-black mt-6 font-baloo text-lg text-black text-center w-full h-fit">
                 <div className="w-full px-8 py-4 leading-6">
                     <p>
