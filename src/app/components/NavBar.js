@@ -90,7 +90,7 @@ function NavBar() {
     useGSAP((context, contextSafe) => {
       if (menuListener) {
         gsap.timeline()
-          .to(mobileMenuRef.current, { duration: 1, yPercent: 100, ease: 'power3.out' })
+          .to(mobileMenuRef.current, { duration: 1, yPercent: 150, ease: 'power3.out' })
           .to(backdropRef.current, { 
             duration: 0.5, 
             opacity: 0.5, 
@@ -260,7 +260,7 @@ function NavBar() {
       {/* Mobile menu dropdown*/}
         <div className="lg:hidden">
           <div ref={backdropRef} className={`backdropNav w-screen fixed inset-y-0 right-0 h-screen bg-black opacity-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}/>
-            <div ref={mobileMenuRef} className="fixed inset-y-0 right-0 z-50 w-full h-screen overflow-y-auto" style={{ transform: 'translateY(-100%)' }}>
+            <div ref={mobileMenuRef} className="fixed inset-y-0 right-0 z-50 w-full h-screen overflow-y-auto" style={{ transform: 'translateY(-150%)' }}>
               <div className="bg-[#836EE7] rounded-b-xl border-b-[6px] border-cyan-200 h-fit py-6 px-6">
                 <div className="flex items-start justify-between">
                   <div className="w-full h-fit">
