@@ -89,8 +89,8 @@ function page() {
                                         <div className="relative flex justify-center w-full max-md:h-wallpaper-screen">
                                             <Image src="/wallpaper_1.png" alt="wallpaper" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full" >
-                                            <Image src="/wallpaper_2.png" alt="wallpaper2" width={337} height={600} placeholder="empty" />
+                                        <div className="relative flex justify-center w-full max-md:h-wallpaper-screen" >
+                                            <Image src="/wallpaper_2.png" alt="wallpaper2" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty" />
                                         </div>
                                         <div className="relative flex justify-center w-full h-full">
                                             <Image src="/wallpaper_3.png" alt="wallpaper3" width={337} height={600} placeholder="empty" />
