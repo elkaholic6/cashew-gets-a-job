@@ -52,7 +52,7 @@ function page() {
                                 <div className="flex flex-wrap w-full h-full justify-center">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] lg:w-[80%] h-fit justify-items-center">
                                         <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/banner_1.png" alt="banner" width={600} height={200} placeholder="empty"/>
+                                            <Image src="/banner_1.png" alt="banner" fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" placeholder="empty"/>
                                         </div>
                                         <div className="relative flex justify-center w-full h-full">
                                             <Image src="/banner_2.png" alt="banner2" width={1200} height={400} placeholder="empty"/>

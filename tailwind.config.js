@@ -40,6 +40,7 @@ module.exports = {
         '1/12': '8.333333%',
       },
       screens: {
+        'nosize': '0px',
         '2xs': '320px',
         'xs': '495px',
       },
