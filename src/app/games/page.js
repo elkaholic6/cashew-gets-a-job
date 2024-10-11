@@ -32,6 +32,7 @@ function page() {
                             alt="Game brands logo"
                             width={500}
                             height={500}
+                            priority
                         />
                     </div>
                     {/* Clouds and other background stuff */}
@@ -55,6 +56,7 @@ function page() {
                                 alt="Clouds"
                                 width={500}
                                 height={500}
+                                priority
                             />
                         </div>
                         <div className="absolute -top-36 sm:-top-96 lg:-top-36 sm:-bottom-28 right-5 flex items-center justify-end z-30">
@@ -64,6 +66,7 @@ function page() {
                                 alt="Clouds"
                                 width={500}
                                 height={500}
+                                priority
                             />
                         </div>
                         <div
@@ -92,7 +95,7 @@ function page() {
                                         <div className="pb-0">
                                             <h1 className="flex justify-center text-gray-800 font-mouse text-3xl py-2 sm:text-4xl md:text-5xl lg:text-6xl border-x-2 border-t-2 border-black bg-[#c5f9ff] rounded-t-xl">{game.title}</h1>
                                         </div>
-                                        <Image className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover border-2 border-black rounded-b-xl" src={game.art} alt="Game art" width={500} height={500} />
+                                        <Image className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover border-2 border-black rounded-b-xl" src={game.art} alt="Game art" width={500} height={500} priority />
                                         <div className="flex justify-center mt-2">
                                             <a 
                                             target="_blank"
@@ -117,9 +120,11 @@ function page() {
                         className='object-cover h-full w-full' 
                         src="/nifty_island.png"
                         alt="Nifty Island"
-                        width={1376}
-                        height={661}
+                        width={2560}
+                        height={1230}
                         quality={100}
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority
                     />
                     <a
                         type="button"
