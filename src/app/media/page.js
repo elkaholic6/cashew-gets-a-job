@@ -89,8 +89,8 @@ function page() {
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
                                             <Image src="/wallpaper_1.png" alt="wallpaper" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty"/>
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full" >
-                                            <Image src="/wallpaper_2.png" alt="wallpaper2" width={337} height={600} placeholder="empty" />
+                                        <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
+                                            <Image src="/wallpaper_2.png" alt="wallpaper2" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
                                             <Image src="/wallpaper_3.png" alt="wallpaper3" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty"/>
@@ -98,17 +98,17 @@ function page() {
                                         <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
                                             <Image src="/wallpaper_4.png" alt="wallpaper4" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full" >
-                                            <Image src="/wallpaper_5.png" alt="wallpaper5" width={337} height={600} placeholder="empty" />
+                                        <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
+                                            <Image src="/wallpaper_5.png" alt="wallpaper5" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full" >
-                                            <Image src="/wallpaper_6.png" alt="wallpaper6" width={337} height={600} placeholder="empty" />
+                                        <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen" >
+                                            <Image src="/wallpaper_6.png" alt="wallpaper6" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
-                                        <div className="relative flex justify-center w-full h-full">
-                                            <Image src="/wallpaper_7.png" alt="wallpaper7" width={337} height={600} placeholder="empty" />
+                                        <div className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
+                                            <Image src="/wallpaper_7.png" alt="wallpaper7" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
-                                        <div  className="relative flex justify-center w-full h-full">
-                                            <Image src="/wallpaper_8.png" alt="wallpaper8" width={337} height={600} placeholder="empty" />
+                                        <div  className="relative flex justify-center w-full max-xs:h-wallpaper-smscreen xs:h-wallpaper-mdscreen md:h-wallpaper-lgscreen">
+                                            <Image src="/wallpaper_8.png" alt="wallpaper8" fill={true} sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" placeholder="empty" />
                                         </div>
                                     </div>
                                 </div>
