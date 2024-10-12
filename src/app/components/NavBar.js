@@ -121,6 +121,8 @@ function NavBar() {
     useGSAP((context, contextSafe) => {
       gsap.registerPlugin(ScrollTrigger);
 
+      ScrollTrigger.config({ ignoreMobileResize: true})
+
         const showAnim = gsap.from('.navbar', {
           yPercent: -150,
           paused: true,
