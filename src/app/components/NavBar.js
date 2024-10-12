@@ -262,103 +262,105 @@ function NavBar() {
       {/* Mobile menu dropdown*/}
         <div className="lg:hidden">
           <div ref={backdropRef} className={`backdropNav w-screen fixed inset-y-0 right-0 h-screen bg-black opacity-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}/>
-            <div ref={mobileMenuRef} className="fixed inset-y-0 right-0 z-50 w-full h-[100dvh] overflow-y-auto" style={{ transform: 'translateY(-100%)' }}>
+            <div ref={mobileMenuRef} className="fixed inset-y-0 right-0 z-50 w-full h-fit max-h-[100dvh] overflow-y-auto" style={{ transform: 'translateY(-100%)' }}>
               <div className="bg-[#836EE7] rounded-b-xl border-b-[6px] border-cyan-200 h-fit py-6 px-6">
-                <div className="flex items-start justify-between">
-                  <div className="w-full h-fit">
-                    <a href="#home" className="flex justify-center -mx-1.5 px-1.5">
-                      <span className="sr-only">Cashew Gets A Job</span>
-                      <Image
-                          alt="cashew logo"
-                          src="/CashewLogo.png"
-                          className="h-20 w-auto rounded-full border border-black"
-                          width={80}
-                          height={80}
-                      />
-                    </a>
+                {/* <div className="h-[100dvh]"> */}
+                  <div className="flex items-start justify-between">
+                    <div className="w-full h-fit">
+                      <a href="#home" className="flex justify-center -mx-1.5 px-1.5">
+                        <span className="sr-only">Cashew Gets A Job</span>
+                        <Image
+                            alt="cashew logo"
+                            src="/CashewLogo.png"
+                            className="h-20 w-auto rounded-full border border-black"
+                            width={80}
+                            height={80}
+                        />
+                      </a>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setMenuListener(false);
+                      }}
+                      className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                    >
+                      <span className="sr-only">Close menu</span>
+                      <XMarkIcon aria-hidden="true" className="absolute h-6 w-6 right-8 top-8" />
+                    </button>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setMenuListener(false);
-                    }}
-                    className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                  >
-                    <span className="sr-only">Close menu</span>
-                    <XMarkIcon aria-hidden="true" className="absolute h-6 w-6 right-8 top-8" />
-                  </button>
-                </div>
-                <div className="mt-6 flow-root">
-                  <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="flex w-full justify-center">
-                    <div className="flex flex-col w-4/5 sm:w-1/2 justify-center ml-3 sm:ml-6 md:ml-14">
-                      <div className="grid grid-cols-2 py-6 font-mouse w-full">
-                        {navigation.map((item, i) => (
-                          item.name !== "Cashew's Corner" && (
-                            <div key={i} className="py-6">
-                              {item.dropdown ? (
-                                <div
-                                  onClick={() => {
-                                    setSlideoutListener(true)
-                                  }}
-                                  type="button"
-                                  className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer">
-                                  {item.name}
-                                  <FaArrowRightLong className="pl-2 pt-1 h-8 w-8 text-gray-300" />
-                                </div>
-                              ) : item.href.startsWith('http') ? (
-                                  <a
-                                    key={item.name}
+                  <div className="mt-6 flow-root">
+                    <div className="-my-6 divide-y divide-gray-500/10">
+                    <div className="flex w-full justify-center">
+                      <div className="flex flex-col w-4/5 sm:w-1/2 justify-center ml-3 sm:ml-6 md:ml-14">
+                        <div className="grid grid-cols-2 py-6 font-mouse w-full">
+                          {navigation.map((item, i) => (
+                            item.name !== "Cashew's Corner" && (
+                              <div key={i} className="py-6">
+                                {item.dropdown ? (
+                                  <div
+                                    onClick={() => {
+                                      setSlideoutListener(true)
+                                    }}
                                     type="button"
-                                    className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer"
+                                    className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer">
+                                    {item.name}
+                                    <FaArrowRightLong className="pl-2 pt-1 h-8 w-8 text-gray-300" />
+                                  </div>
+                                ) : item.href.startsWith('http') ? (
+                                    <a
+                                      key={item.name}
+                                      type="button"
+                                      className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer"
+                                      onClick={() => {
+                                        setMenuListener(false);
+                                        handleNavClickAnchor(item.href);
+                                      }}
+                                    >
+                                      {item.name}
+                                  </a>
+                                ) : item.href.startsWith('#') ? (
+                                  <Link
+                                    
+                                    href={item.href}
+                                    onClick={(event) => {
+                                      setMenuListener(false);
+                                      handleNavigationAndAnimation(event, item.href)
+                                    }}
+                                    className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer">
+                                    {item.name}
+                                  </Link>
+                                ) : (
+                                  <Link
+                                    
+                                    href={item.href}
                                     onClick={() => {
                                       setMenuListener(false);
-                                      handleNavClickAnchor(item.href);
                                     }}
-                                  >
+                                    className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer">
                                     {item.name}
-                                </a>
-                              ) : item.href.startsWith('#') ? (
-                                <Link
-                                  
-                                  href={item.href}
-                                  onClick={(event) => {
-                                    setMenuListener(false);
-                                    handleNavigationAndAnimation(event, item.href)
-                                  }}
-                                  className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer">
-                                  {item.name}
-                                </Link>
-                              ) : (
-                                <Link
-                                  
-                                  href={item.href}
-                                  onClick={() => {
-                                    setMenuListener(false);
-                                  }}
-                                  className="flex justify-start rounded-lg px-3 text-5xl text-[#edfaff] font-semibold leading-7 cursor-pointer">
-                                  {item.name}
-                                </Link>
-                              )}
-                            </div>
-                          )
-                        ))}
+                                  </Link>
+                                )}
+                              </div>
+                            )
+                          ))}
+                        </div>
                       </div>
                     </div>
+                    <div className="py-6 font-mouse flex justify-center">
+                      <a
+                        href="https://www.cashewgetsajob.com/collections/all"
+                        target='_blank' 
+                        rel='noopener noreferrer'
+                        type="button"
+                        onClick={() => setMenuListener(false)}
+                        className="-mx-3 text-4xl flex justify-center font-semibold leading-7 text-gray-900 border-2 border-black rounded-full px-6 py-2 min-w-64 xs:w-3/5 sm:w-2/3 md:w-1/2 bg-[#ffee00] overflow-hidden cursor-pointer"
+                      >
+                          SHOP
+                      </a>
+                    </div>
                   </div>
-                  <div className="py-6 font-mouse flex justify-center">
-                    <a
-                      href="https://www.cashewgetsajob.com/collections/all"
-                      target='_blank' 
-                      rel='noopener noreferrer'
-                      type="button"
-                      onClick={() => setMenuListener(false)}
-                      className="-mx-3 text-4xl flex justify-center font-semibold leading-7 text-gray-900 border-2 border-black rounded-full px-6 py-2 min-w-64 xs:w-3/5 sm:w-2/3 md:w-1/2 bg-[#ffee00] overflow-hidden cursor-pointer"
-                    >
-                        SHOP
-                    </a>
-                  </div>
-                </div>
+                {/* </div> */}
               </div>
             </div>
           </div>
