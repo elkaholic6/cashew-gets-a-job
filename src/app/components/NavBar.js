@@ -262,7 +262,7 @@ function NavBar() {
       {/* Mobile menu dropdown*/}
         <div className="lg:hidden">
           <div ref={backdropRef} className={`backdropNav w-screen fixed inset-y-0 right-0 h-screen bg-black opacity-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}/>
-            <div ref={mobileMenuRef} className="fixed inset-y-0 right-0 z-50 w-full h-screen overflow-y-auto" style={{ transform: 'translateY(-100%)' }}>
+            <div ref={mobileMenuRef} className="fixed inset-y-0 right-0 z-50 w-full h-fit overflow-y-auto" style={{ transform: 'translateY(-100%)' }}>
               <div className="bg-[#836EE7] rounded-b-xl border-b-[6px] border-cyan-200 h-fit py-6 px-6">
                 <div className="flex items-start justify-between">
                   <div className="w-full h-fit">
