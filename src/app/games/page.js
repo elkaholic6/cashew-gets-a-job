@@ -27,7 +27,7 @@ function page() {
                     {/* Brand Logos */}
                     <div className="flex w-full justify-center">
                         <Image 
-                            className="flex justify-center w-4/5 mt-20 object-contain rounded-xl" 
+                            className="flex justify-center w-4/5 mt-20 lg:mt-28 xl:mt-32 object-contain rounded-xl" 
                             src="/gamebrandslogo.webp"
                             alt="Game brands logo"
                             width={500}
@@ -131,7 +131,7 @@ function page() {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://niftyis.land/Cashew/0"
-                        className="absolute w-9/12 xs:w-1/2 sm:w-[40%] max-w-[445px] flex items-center justify-center bottom-[40%] left-1/2 -translate-x-1/2 bg-[#5cffa5] hover:bg-[#84ffbb] text-gray-900 font-baloo text-xl lg:text-3xl px-4 py-1 border-2 border-gray-900 rounded-full"
+                        className="absolute w-9/12 xs:w-1/2 sm:w-[40%] max-w-[445px] flex items-center justify-center bottom-[20%] lg:bottom-[40%] left-1/2 -translate-x-1/2 bg-[#5cffa5] hover:bg-[#84ffbb] text-gray-900 font-baloo text-xl lg:text-3xl px-4 py-1 border-2 border-gray-900 rounded-full"
                     >
                         Explore Cashew&apos;s Island!
                     </a>

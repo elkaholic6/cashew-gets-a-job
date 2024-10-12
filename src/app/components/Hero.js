@@ -122,7 +122,7 @@ export default function Hero() {
             priority
           />
         </div>
-        <div className="flex mx-full justify-center py-32">
+        <div className="flex mx-full justify-center pt-32">
           <div className="relative flex flex-col items-center justify-center">
             <div ref={container}>
             <svg className="w-full h-auto" width="2000" height="640" viewBox="0 0 2000 640" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,6 +199,14 @@ export default function Hero() {
             className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#e17313] to-[#fde25c] opacity-40 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
           />
         </div>
+      </div>
+      <div className="flex flex-1 items-center justify-center">
+        <Image
+          src="/hero-getsajob.svg"
+          alt="gets a job image"
+          className="w-[40%] h-full object-cover"
+          width={2000}
+          height={1000} />
       </div>
     </div>
   )
