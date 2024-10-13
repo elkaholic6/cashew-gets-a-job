@@ -200,11 +200,12 @@ export default function Hero() {
           />
         </div>
       </div>
+      {/* Gets a job */}
       <div className="flex flex-1 items-center justify-center">
         <Image
           src="/hero-getsajob.svg"
           alt="gets a job image"
-          className="w-[40%] h-full object-cover"
+          className="w-[50%] h-full object-cover"
           width={2000}
           height={1000} />
       </div>
