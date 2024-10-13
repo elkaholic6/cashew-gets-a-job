@@ -356,7 +356,7 @@ function NavBar() {
                         onClick={() => setMenuListener(false)}
                         className="-mx-3 text-4xl flex justify-center font-semibold leading-7 text-gray-900 border-2 border-black rounded-full px-6 py-2 min-w-64 xs:w-3/5 sm:w-2/3 md:w-1/2 bg-[#ffee00] overflow-hidden cursor-pointer"
                       >
-                          SHOP
+                          Connect Wallet
                       </a>
                     </div>
                   </div>

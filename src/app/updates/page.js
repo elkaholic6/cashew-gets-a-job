@@ -89,7 +89,7 @@ async function page() {
                     </div>
                 </div>
                 {/* Blogs */}
-                <div className="flex justify-center h-full w-full font-serif text-xl pb-6">
+                <div className="flex justify-center h-full w-full font-baloo text-xl pb-6">
                     <div className="w-full lg:right-16 xl:right-30 mt-2 lg:mt-5 rounded-lg overflow-hidden z-40">
                         <div className="relative flex flex-wrap justify-center items-center flex-col">
                             {blogArr.map((blog, i) => {
@@ -101,11 +101,11 @@ async function page() {
                                             {/* {blog.node.blog.handle === "cashews-corner" && ( */}
                                             <div className="w-full xl:w-[80%]">
                                                 <div className="pb-0">
-                                                    <h1 className={`flex w-full justify-left pl-3 text-gray-800 font-sans py-2 text-lg md:text-xl lg:text-2xl font-semibold border-x-2 border-black bg-[#dbfbff] ${i === 0 ? "border-t-2 rounded-t-xl" : ""}`}>{blog.node.title}</h1>
+                                                    <h1 className={`flex w-full justify-left pl-3 text-gray-800 font-mouse py-2 text-2xl md:text-3xl lg:text-5xl border-x-2 border-t-2 border-black bg-[#dbfbff] rounded-t-xl`}>{blog.node.title}</h1>
                                                 </div>
                                                 <div className="flex flex-row w-full justify-center">
-                                                    <div className={`flex flex-row min-h-[126px] justify-between items-center sm:items-start w-full text-black text-left text-base md:text-lg bg-[#f8f8f8] object-cover border-x-2 border-t-gray-400 border-t border-black p-3 ${i === blogArr.length - 1 ? "rounded-b-xl border-b-2" : "border-b"}`}>
-                                                        <div className="flex flex-col justify-between w-2/3 h-full">
+                                                    <div className={`flex flex-row min-h-[126px] justify-between items-center sm:items-start w-full text-black text-left text-base md:text-lg bg-[#f8f8f8] object-cover mb-4 border-x-2 border-t-gray-400 border-t border-black p-3 rounded-b-xl border-b-2`}>
+                                                        <div className="flex flex-col justify-between w-full h-full">
                                                             <BlogHtml html={blog.node.content} />
                                                             <div>
                                                                 <p className="text-xs text-gray-500">{formatDateTime(blog.node.publishedAt)}</p>
