@@ -100,7 +100,7 @@ export default async function SingleBlogPage({ params }) {
                     </div>
                 </div>
                 {/* Blogs */}
-                <div className="flex justify-center h-full w-full font-serif text-base md:text-lg lg:text-xl">
+                <div className="flex justify-center h-full w-full font-baloo text-base md:text-lg lg:text-xl">
                     <div className="w-full lg:right-16 xl:right-30 mt-2 lg:mt-5 rounded-lg overflow-hidden z-40">
                         <div className="relative flex flex-wrap justify-center items-center flex-col md:flex-row">
                                     <div
@@ -108,7 +108,7 @@ export default async function SingleBlogPage({ params }) {
                                 >
                                     <div className="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%]">
                                         <div className="pb-0">
-                                            <h1 className="flex w-full justify-center text-gray-800 font-sans text-xl p-3 sm:text-2xl md:text-3xl lg:text-4xl border-x-2 border-t-2 border-black bg-[#dbfbff] rounded-t-xl">{data.article.title}</h1>
+                                            <h1 className="flex w-full justify-center text-gray-800 font-mouse text-2xl p-3 sm:text-4xl md:text-5xl lg:text-6xl border-x-2 border-t-2 border-black bg-[#dbfbff] rounded-t-xl">{data.article.title}</h1>
                                         </div>
                                         <div className="flex flex-col w-full text-black text-left bg-[#f8f8f8] object-cover border-x-2 border-b-2 border-t border-x-black border-b-black border-t-gray-400 rounded-b-xl p-3">
                                             <div className="flex justify-start items-center pb-2">
