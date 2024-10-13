@@ -88,7 +88,7 @@ export default function Hero() {
     }, { scope: container }); 
 
   return (
-    <div id="home" className="h-screen bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
+    <div id="home" className="h-fit bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
       <div className="relative isolate px-1 pt-14 lg:px-8">
         <div
           aria-hidden="true"
@@ -102,7 +102,8 @@ export default function Hero() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ffffff] to-[#3c3c3c] opacity-40 sm:left-[calc(50%-20rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="absolute top-18 left-5 right-0 flex items-center justify-start">
+        {/* Left cloud */}
+        <div className="absolute top-20 left-5 right-0 flex items-center justify-start">
           <Image 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud1.svg" 
@@ -112,7 +113,8 @@ export default function Hero() {
             priority
           />
         </div>
-        <div className="absolute bottom-60 left-25 right-1 flex items-center justify-end">
+        {/* Right cloud */}
+        <div className="absolute top-32 left-25 right-1 flex items-center justify-end">
           <Image 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud2.svg" 
@@ -201,7 +203,7 @@ export default function Hero() {
         </div>
       </div>
       {/* Gets a job */}
-      <div className="flex flex-1 items-center justify-center">
+      <div className="flex flex-1 items-center justify-center pb-10">
         <Image
           src="/hero-getsajob.svg"
           alt="gets a job image"
