@@ -1,7 +1,7 @@
-// 'use client';
+'use client';
 import { Inter } from "next/font/google";
 import Loading from "./loading";
-import { Suspense, useState, useEffect } from 'react';
+import { Suspense } from 'react';
 // import ShopProvider from '../../context/shopContext';
 import "./globals.css";
 
@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         {/* <ShopProvider> */}
-          <Suspense fallback={<Loading />}>
+          {/* <Suspense fallback={<Loading />}> */}
           {children}
-          </Suspense>
+          {/* </Suspense> */}
         {/* </ShopProvider> */}
       </body>
     </html>

@@ -12,6 +12,12 @@ export default function Hero() {
   const container = useRef();
 
   useGSAP((context, contextSafe) => {
+    const letterElements = container.current.querySelectorAll('g');
+    // gsap.set(letterElements, {opacity:0});
+    gsap.timeline().from(letterElements, {y:150, stagger:0.1, duration:0.8, opacity:0, ease:"back"})
+  })
+
+  useGSAP((context, contextSafe) => {
     const handleMouseEnter = contextSafe((event) => {
       const hoveredElement = event.currentTarget;
 
@@ -86,11 +92,6 @@ export default function Hero() {
       };
     });
     }, { scope: container }); 
-
-    useGSAP((context, contextSafe) => {
-      const letterElements = container.current.querySelectorAll('g');
-      gsap.timeline().from(letterElements, {y:160, stagger:0.1, duration:0.8, opacity:0, ease:"back"})
-    })
 
   return (
     <div id="home" className="h-fit bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
