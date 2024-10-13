@@ -377,7 +377,7 @@ function NavBar() {
                       <Image
                           alt="cashew logo"
                           src="/CashewLogo.png"
-                          className="h-20 w-auto rounded-full border border-black"
+                          className="h-12 w-auto rounded-full border border-black"
                           width={80}
                           height={80}
                       />
@@ -395,7 +395,7 @@ function NavBar() {
                     <XMarkIcon aria-hidden="true" className="absolute h-6 w-6 right-8 top-8" />
                   </button>
                 </div>
-                <div className="flex justify-center w-full py-6">
+                <div className="flex justify-center w-full pt-4">
                     <div 
                       onClick={() => {
                         setSlideoutListener(false);
