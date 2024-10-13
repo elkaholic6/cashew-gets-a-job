@@ -12,15 +12,15 @@ function BookPages() {
   const el = useRef();
   const boxesRef = useRef();
   const q = gsap.utils.selector(el);
-  const countRef = useRef(0); // Use a ref to persist the count across renders
+  const countRef = useRef(0);
 
   const createItem = () => {
-    const newId = ++countRef.current;  // Increment on client-side
+    const newId = ++countRef.current;
     return { id: newId, image: wrapImages(newId), status: 'entered' };
   };
 
   const [layout, setLayout] = useState(() => ({
-    items: [createItem(), createItem(), createItem(), createItem()]  // Initialize with 4 items
+    items: [createItem(), createItem(), createItem(), createItem()]
   }));
 
   const removeItems = useCallback(
@@ -74,19 +74,19 @@ function BookPages() {
     const newItem = createItem();
     setLayout((prev) => ({
       state: Flip.getState(q('.box')),
-      items: [...prev.items.slice(1), newItem]  // Remove the first item and add the new one
+      items: [...prev.items.slice(1), newItem]
     }));
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (layout.items.length > 0) {
-        addItem();  // Trigger addItem which internally handles state update
+        addItem(); 
       }
     }, 9000);
 
-    return () => clearInterval(interval);  // Cleanup the interval on component unmount
-  }, [layout.items]);  // Only re-run effect if layout.items changes
+    return () => clearInterval(interval);
+  }, [layout.items]);
 
   return (
     <div className="bg-gradient-to-br from-[#ffff00e9] from-0% via-[#8aff88c4] to-[#c57819] to-100% w-full h-full" ref={el}>
@@ -95,20 +95,18 @@ function BookPages() {
         </h1> */}
         <div className="box">
             <div className="flex justify-center">
-              <div className="absolute w-[95%] md:w-3/4 max-w-[1260px] h-fit my-4 sm:mt-4 xl:mt-6 2xl:mt-8 bg-cyan-300 z-30 border-none sm:border-[8px] md:border-[16px] border-cyan-300 rounded-xl overflow-hidden shadow-[0_0px_25px_-3px_rgba(0,0,0,0.4)]">
-                  <div className="relative w-full h-full flex flex-wrap max-md:h-smbook-pages-screen md:h-mdbook-pages-screen" ref={boxesRef}>
+              <div className="absolute w-[95%] md:w-3/4 h-fit my-4 sm:mt-4 xl:mt-6 2xl:mt-8 bg-cyan-300 z-30 border-none sm:border-[8px] md:border-[16px] border-cyan-300 rounded-xl overflow-hidden shadow-[0_0px_25px_-3px_rgba(0,0,0,0.4)]">
+                  <div className="relative w-full h-fit flex flex-wrap max-md:h-smbook-pages-screen md:h-mdbook-pages-screen" ref={boxesRef}>
                     {/* 3840 x 2400 is intrinsic ratio */}
-                  <Image className="object-cover z-0 invisible" src='/rockstar.png' alt="Rockstar" width={1260} height={788} sizes="(max-width: 768px) 95vw, 75vw" quality={0}/> 
+                  <Image className="object-cover z-0 invisible" src='/rockstar.png' alt="Rockstar" fill sizes="(max-width: 768px) 95vw, 75vw" quality={0}/> 
                   <div className="absolute flex w-full h-full leading-none z-[90] border-2 border-gray-700 rounded-xl overflow-hidden">
                           {layout.items.map((item) => (
                           <div
                               id={`box-${item.id}`}
                               key={item.id}
-                              className="box absolute"
+                              className="box absolute w-full h-full"
                           >
-                            {/* <div className="relative flex justify-center w-[95vw] md:w-[75vw] max-md:h-smbook-pages-screen md:h-mdbook-pages-screen"> */}
-                              <Image className="object-cover rounded-xl overflow-hidden" src={item.image} alt={`NFT ${item.id}`} width={1260} height={788} sizes="(max-width: 768px) 95vw, 75vw" quality={100}/>
-                            {/* </div> */}
+                              <Image className="object-cover rounded-xl overflow-hidden w-full h-full" src={item.image} alt={`NFT ${item.id}`} fill sizes="(max-width: 768px) 95vw, 75vw" quality={100}/>
                           </div>
                           ))}
                   </div>

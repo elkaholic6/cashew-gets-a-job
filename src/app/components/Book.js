@@ -51,6 +51,7 @@ function Book() {
         {/* Book 1 */}
         <div className="book book1 h-full w-[100vw] shrink-0 relative flex flex-col justify-center z-10">
           <Image
+          priority
           className="w-full object-contain z-40 sm:hidden"
           src="/smBook.svg" 
           alt="smBook"
@@ -58,6 +59,7 @@ function Book() {
           height={1678}
           />
           <Image
+          priority
           className="hidden sm:block lg:hidden w-full object-contain z-40"
           src="/mdBook.svg" 
           alt="mdBook"
@@ -65,6 +67,7 @@ function Book() {
           height={913}
           />
           <Image
+          priority
           className="hidden lg:block w-full object-contain z-40"
           src="/Book.svg" 
           alt="Book"

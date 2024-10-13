@@ -54,16 +54,20 @@ const Team = () => {
       
         const teamMembers = gsap.utils.toArray(container.current.getElementsByClassName('teammember'));    
     
-        teamMembers.forEach((teammember) => {
-            teammember.addEventListener('mouseenter', handleMouseEnter);
-            teammember.addEventListener('mouseleave', handleMouseLeave);
-            teammember.addEventListener("mousemove", handleMouseMove);
-    
-          return () => {
-            teammember.current.removeEventListener('mouseenter', handleMouseEnter);
-            teammember.current.removeEventListener('mouseleave', handleMouseLeave);
-            teammember.current.removeEventListener("mousemove", handleMouseMove);
-          };
+        let mm = gsap.matchMedia();
+
+        mm.add("(min-width: 768px)", () => {
+            teamMembers.forEach((teammember) => {
+                teammember.addEventListener('mouseenter', handleMouseEnter);
+                teammember.addEventListener('mouseleave', handleMouseLeave);
+                teammember.addEventListener("mousemove", handleMouseMove);
+        
+            return () => {
+                teammember.current.removeEventListener('mouseenter', handleMouseEnter);
+                teammember.current.removeEventListener('mouseleave', handleMouseLeave);
+                teammember.current.removeEventListener("mousemove", handleMouseMove);
+            };
+            });
         });
         }); 
 

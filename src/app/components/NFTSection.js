@@ -114,14 +114,14 @@ function NFTSection() {
                 <div className="flex justify-center">
                     <div className="absolute max-w-[500px] w-10/12 sm:w-1/2 md:w-2/5 lg:w-1/3 lg:right-16 xl:right-30 h-fit mt-2 lg:mt-5 border-2 border-black bg-[#eaffea] rounded-lg overflow-hidden z-40">
                         <div className="relative w-full h-full flex flex-wrap max-sm:h-nfts-screen sm:h-smnfts-screen md:h-mdnfts-screen lg:h-lgnfts-screen" ref={boxesRef}>
-                        <Image className="object-cover z-0" src='/indianajonesnft.png' alt="indianajonesnft" sizes="(max-width: 640px) 83vw, (max-width: 768px) 50vw, (max-width: 1024px) 40vw, 33vw" layout="fill"/>
+                        <Image className="object-cover z-0" src='/indianajonesnft.png' alt="indianajonesnft" sizes="(max-width: 640px) 83vw, (max-width: 768px) 50vw, (max-width: 1024px) 40vw, 33vw" fill/>
                             {layout.items.map((item) => (
                             <div
                                 id={`box-${item.id}`}
                                 key={item.id}
                                 className="box absolute w-full h-full"
                             >
-                                <Image className="object-cover" src={item.image} alt={`NFT ${item.id}`} sizes="(max-width: 640px) 83vw, (max-width: 768px) 50vw, (max-width: 1024px) 40vw, 33vw" layout="fill"/>
+                                <Image className="object-cover" src={item.image} alt={`NFT ${item.id}`} sizes="(max-width: 640px) 83vw, (max-width: 768px) 50vw, (max-width: 1024px) 40vw, 33vw" fill/>
                             </div>
                             ))}
                         </div>

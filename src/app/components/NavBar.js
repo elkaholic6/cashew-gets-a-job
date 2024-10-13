@@ -156,9 +156,9 @@ function NavBar() {
             >
               <span className="sr-only">Open main menu</span>
               {!mobileMenuOpen ? (
-                  <Image src='/cashewlogo.png' aria-hidden="true" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 mt-6 mr-6 rounded-full border border-black" alt="logo" width={80} height={80}/>
+                  <p className="font-mouse text-2xl sm:text-3xl px-4 py-1 bg-[#836EE7] mt-6 mr-6 rounded-md border border-black">Menu</p>
                 ) : (
-                  <Image src='/cashewlogo.png' aria-hidden="true" className="hidden" alt="logo" width={80} height={80}/>
+                  <p className="hidden"/>
                 )
               }
             </button>
@@ -272,7 +272,7 @@ function NavBar() {
                         <Image
                             alt="cashew logo"
                             src="/CashewLogo.png"
-                            className="h-20 w-auto rounded-full border border-black"
+                            className="h-12 w-auto rounded-full border border-black"
                             width={80}
                             height={80}
                         />
@@ -293,7 +293,7 @@ function NavBar() {
                     <div className="-my-6 divide-y divide-gray-500/10">
                     <div className="flex w-full justify-center">
                       <div className="flex flex-col w-4/5 sm:w-1/2 justify-center ml-3 sm:ml-6 md:ml-14">
-                        <div className="grid grid-cols-2 py-6 font-mouse w-full">
+                        <div className="grid grid-cols-2 py-2 font-mouse w-full">
                           {navigation.map((item, i) => (
                             item.name !== "Cashew's Corner" && (
                               <div key={i} className="py-6">

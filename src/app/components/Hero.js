@@ -87,6 +87,11 @@ export default function Hero() {
     });
     }, { scope: container }); 
 
+    useGSAP((context, contextSafe) => {
+      const letterElements = container.current.querySelectorAll('g');
+      gsap.timeline().from(letterElements, {y:160, stagger:0.1, duration:0.8, opacity:0, ease:"back"})
+    })
+
   return (
     <div id="home" className="h-fit bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
       <div className="relative isolate px-1 pt-14 lg:px-8">
@@ -205,6 +210,7 @@ export default function Hero() {
       {/* Gets a job */}
       <div className="flex flex-1 items-center justify-center pb-10">
         <Image
+          priority
           src="/hero-getsajob.svg"
           alt="gets a job image"
           className="w-[50%] h-full object-cover"
