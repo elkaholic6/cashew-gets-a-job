@@ -94,10 +94,10 @@ function Book() {
                     </a>
                 </div>
                 </div>
-                <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[30%] xl:w-1/3">
-                  <div className="flex items-center max-w-lg border md:border-2 border-[#333333] rounded-full overflow-hidden mb-6 mt-12 xs:mt-6 ">
+                <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[25%] xl:w-1/3 max-w-[220px]">
+                  <div className="flex items-center max-w-lg overflow-hidden mb-6 mt-12 xs:mt-6 ">
                       <Image
-                        src="/cashewgetsajobcircle.webp"
+                        src="/book_1_sticker.png"
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                         alt="cashewgetsajobcircle"
                         width={500}
@@ -161,14 +161,14 @@ function Book() {
                     </a>
                   </div>
                 </div>
-                <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[30%] xl:w-1/3">
-                  <div className="flex items-center max-w-lg border md:border-2 border-[#333333] rounded-full overflow-hidden mb-6 mt-12 xs:mt-6 ">
+                <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[25%] xl:w-1/3 max-w-[300px]">
+                  <div className="flex items-center max-w-lg overflow-hidden mb-6 mt-12 xs:mt-6 ">
                       <Image
-                        src="/Cashewkeepsgoingpic.webp"
+                        src="/book_2_sticker.png"
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                         alt="Cashewkeepsgoingpic"
-                        width={500}
-                        height={500}
+                        width={363}
+                        height={449}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                   </div>
