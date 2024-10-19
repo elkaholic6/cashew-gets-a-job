@@ -39,7 +39,7 @@ async function page() {
             <div className="flex flex-grow flex-col justify-around">
                 {/* Header */}
                 <h1 className="flex w-full justify-center font-mouse text-[#ffee00] text-7xl md:text-8xl lg:text-9xl pt-12 lg:pt-28 xl:pt-36">
-                    UPDATES
+                    NEWS
                 </h1>
                 {/* Clouds and other background stuff */}
                 <div className="absolute w-full px-1 pt-14 lg:px-8">

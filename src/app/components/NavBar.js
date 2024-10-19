@@ -19,9 +19,9 @@ const navigation = [
   { name: 'Books', href: '#books', dropdown: false },
   { name: 'Team', href: '#team', dropdown: false },
   { name: 'NFTs', href: '#digital-collectibles', dropdown: false },
-  { name: 'News', href: '', dropdown: true },
+  // { name: 'News', href: '', dropdown: true },
+  { name: "News", href: '/updates', dropdown: false },
   { name: "Media", href: '/media', dropdown: false },
-  // { name: "Updates", href: '/updates', dropdown: false },
   { name: 'Games', href: '/games', dropdown: false },
   { name: 'Shop', href: 'https://www.cashewgetsajob.com/collections/all', dropdown: false },
 ]
@@ -182,43 +182,45 @@ function NavBar() {
                 <Menu as="div" className="flex relative text-left gap-12 text-3xl xl:text-4xl py-2 font-mouse font-medium tracking-wider text-gray-800">
                 {navigation.map((item, i) => (
                   <div key={i}>
-                    {item.dropdown ? (
-                      <div>
-                        <MenuButton 
-                          aria-haspopup="true"
-                          aria-expanded="true"
-                          type="button"
-                          className="flex items-center justify-center leading-6 cursor-pointer">
-                          {item.name}
-                          <FaAngleDown className="-mr-1 pl-1 h-5 w-5 text-gray-800" />
-                        </MenuButton>
-                        <MenuItems
-                          transition
-                          className="absolute font-mouse text-2xl xl:text-3xl z-10 mt-3 w-40 origin-top-right border border-gray-600 rounded-md bg-[#fcffff] shadow-lg transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                        >
-                          <div className="py-1">
-                            <MenuItem>
-                              <Link
+                    {
+                    // item.dropdown ? (
+                    //   <div>
+                    //     <MenuButton 
+                    //       aria-haspopup="true"
+                    //       aria-expanded="true"
+                    //       type="button"
+                    //       className="flex items-center justify-center leading-6 cursor-pointer">
+                    //       {item.name}
+                    //       <FaAngleDown className="-mr-1 pl-1 h-5 w-5 text-gray-800" />
+                    //     </MenuButton>
+                    //     <MenuItems
+                    //       transition
+                    //       className="absolute font-mouse text-2xl xl:text-3xl z-10 mt-3 w-40 origin-top-right border border-gray-600 rounded-md bg-[#fcffff] shadow-lg transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                    //     >
+                    //       <div className="py-1">
+                    //         <MenuItem>
+                    //           <Link
                                 
-                                href="/spaces"
-                                className="block px-6 py-4 text-gray-800 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 tracking-wide"
-                              >
-                                Spaces
-                              </Link>
-                            </MenuItem>
-                            <MenuItem>
-                              <Link
+                    //             href="/spaces"
+                    //             className="block px-6 py-4 text-gray-800 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 tracking-wide"
+                    //           >
+                    //             Spaces
+                    //           </Link>
+                    //         </MenuItem>
+                    //         <MenuItem>
+                    //           <Link
                                 
-                                href="/updates"
-                                className="block px-6 pb-4 text-gray-800 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 tracking-wide"
-                              >
-                                Updates
-                              </Link>
-                            </MenuItem>
-                          </div>
-                        </MenuItems>
-                      </div>
-                    ) : item.href.startsWith('http') ? (
+                    //             href="/updates"
+                    //             className="block px-6 pb-4 text-gray-800 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 tracking-wide"
+                    //           >
+                    //             Updates
+                    //           </Link>
+                    //         </MenuItem>
+                    //       </div>
+                    //     </MenuItems>
+                    //   </div>
+                    // ) : 
+                    item.href.startsWith('http') ? (
                       <a 
                         onClick={() => handleNavClickAnchor(item.href)}
                         type="button"
@@ -366,9 +368,9 @@ function NavBar() {
           </div>
         </div>
         {/* Mobile menu slide-out*/}
-        <div className="lg:hidden">
+        {/* <div className="lg:hidden"> */}
           {/* <div ref={backdropRef} className={`backdropNav w-screen fixed inset-y-0 right-0 h-screen bg-black opacity-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}/> */}
-            <div ref={slideOutRef} className="fixed inset-y-0 right-0 z-[60] w-full h-screen overflow-y-auto" style={{ transform: 'translateX(-100%)' }}>
+            {/* <div ref={slideOutRef} className="fixed inset-y-0 right-0 z-[60] w-full h-screen overflow-y-auto" style={{ transform: 'translateX(-100%)' }}>
               <div className="bg-[#836EE7] rounded-b-xl border-b-[6px] border-r-2 border-cyan-200 h-fit py-6 px-6">
                 <div className="flex items-start justify-between">
                   <div className="w-full h-fit">
@@ -442,9 +444,9 @@ function NavBar() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+          {/* </div>
+        </div> */}
       </nav>
     </header>
     </div>
