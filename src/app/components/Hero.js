@@ -95,7 +95,7 @@ export default function Hero() {
 
   return (
     <div id="home" className="h-fit bg-gradient-to-b from-sky-700 from-20% via-[#43e2d8] via-75% to-[#cadba8] to-100%">
-      <div className="relative isolate px-1 pt-14 lg:px-8">
+      <div className="relative isolate px-1 pt-4 md:pt-14 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -109,7 +109,7 @@ export default function Hero() {
           />
         </div>
         {/* Left cloud */}
-        <div className="absolute top-20 left-5 right-0 flex items-center justify-start">
+        <div className="absolute top-10 left-5 right-0 flex items-center justify-start">
           <Image 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud1.svg" 
@@ -120,7 +120,7 @@ export default function Hero() {
           />
         </div>
         {/* Right cloud */}
-        <div className="absolute top-32 left-25 right-1 flex items-center justify-end">
+        <div className="absolute top-20 left-25 right-1 flex items-center justify-end">
           <Image 
             className="max-w-80 w-1/3 md:w-1/4 lg:w-full max-h-96 object-contain"
             src="/cloud2.svg" 
@@ -218,6 +218,29 @@ export default function Hero() {
           width={2000}
           height={1000} />
       </div>
-    </div>
+      {/* Landingpage_nfts.png */}
+      <div className="relative flex flex-1 items-center justify-center z-[10]">
+        <div className='invisible w-full'>
+            <Image
+              priority
+              src="/landingpage_nfts.png"
+              alt="Landing page nfts"
+              className="w-[100%] px-3 lg:px-16 xl:px-24 h-fit object-cover"
+              width={2000}
+              height={1000} 
+              quality={0}
+              />
+          </div>
+          <div className='absolute top-2 w-full'>
+            <Image
+              priority
+              src="/landingpage_nfts.png"
+              alt="Landing page nfts"
+              className="w-[100%] px-3 lg:px-16 xl:px-24 h-fit object-cover"
+              width={2000}
+              height={1000} />
+          </div>
+        </div>
+      </div>
   )
 }
