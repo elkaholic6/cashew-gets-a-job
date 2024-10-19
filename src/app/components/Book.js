@@ -94,7 +94,7 @@ function Book() {
                     </a>
                 </div>
                 </div>
-                <div className="w-[52%] sm:w-[22%] md:w-[29%] lg:w-[22%] xl:w-1/3 max-w-[275px]">
+                <div className="w-[42%] sm:w-[22%] md:w-[29%] lg:w-[22%] xl:w-1/3 max-w-[275px]">
                   <div className="flex items-center max-w-lg overflow-hidden mb-6 mt-12 xs:mt-6 ">
                       <Image
                         src="/book_1_sticker.png"
@@ -161,7 +161,7 @@ function Book() {
                     </a>
                   </div>
                 </div>
-                <div className="w-3/5 sm:w-1/4 md:w-1/3 lg:w-[25%] xl:w-1/3 max-w-[300px]">
+                <div className="w-[48%] sm:w-1/4 md:w-1/3 lg:w-[25%] xl:w-1/3 max-w-[300px]">
                   <div className="flex items-center max-w-lg overflow-hidden mb-6 mt-12 xs:mt-6 ">
                       <Image
                         src="/book_2_sticker.png"
