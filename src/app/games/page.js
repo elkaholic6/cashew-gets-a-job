@@ -27,11 +27,12 @@ function page() {
                     {/* Brand Logos */}
                     <div className="flex w-full justify-center">
                         <Image 
-                            className="flex justify-center w-4/5 mt-20 lg:mt-28 xl:mt-32 object-contain rounded-xl" 
-                            src="/gamebrandslogo.webp"
+                            className="flex justify-center w-4/5 mt-20 lg:mt-28 xl:mt-32 object-contain rounded-xl max-w-[800px]" 
+                            src="/gamebrandslogo.png"
                             alt="Game brands logo"
                             width={500}
                             height={500}
+                            quality={100}
                             priority
                         />
                     </div>
